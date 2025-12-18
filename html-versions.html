@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Versions &amp; Changes</title>
+  </head>
+  <body>
+    <header>
+      <h1>HTML Versions &amp; Main Changes</h1>
+      <nav>
+        <a href="index.html">Home</a> |
+        <a href="html-history.html">HTML History</a> |
+        <a href="html-versions.html">HTML Versions</a>
+      </nav>
+      <hr />
+    </header>
+
+    <main>
+      <p>
+        This page gives a quick overview of important HTML versions and what
+        changed in each one, plus example code snippets inside
+        <code>&lt;code&gt;</code> blocks.
+      </p>
+
+      <section>
+        <h2>HTML 1.0 (around 1991)</h2>
+        <ul>
+          <li>First public description of HTML by Tim Berners‑Lee.</li>
+          <li>
+            Very small set of tags:
+            <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>,
+            <code>&lt;a&gt;</code>, <code>&lt;ul&gt;</code>,
+            <code>&lt;li&gt;</code>, <code>&lt;img&gt;</code>.
+          </li>
+          <li>No <code>&lt;table&gt;</code>, no forms, no CSS, no JavaScript.</li>
+        </ul>
+        <h3>Typical HTML 1.0 style page</h3>
+        <pre>
+<code>&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My first page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome&lt;/h1&gt;
+    &lt;p&gt;This is simple text with a &lt;a href="#"&gt;link&lt;/a&gt;.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+        </pre>
+      </section>
+
+      <section>
+        <h2>HTML 2.0 (1995)</h2>
+        <ul>
+          <li>Standardized the early HTML used on the web.</li>
+          <li>
+            Added support for basic forms with <code>&lt;form&gt;</code>,
+            <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>,
+            <code>&lt;select&gt;</code>, <code>&lt;option&gt;</code>.
+          </li>
+          <li>Became an official IETF standard (RFC 1866).</li>
+        </ul>
+        <h3>Example form in HTML 2.0 style</h3>
+        <pre>
+<code>&lt;form action="/submit" method="post"&gt;
+  &lt;p&gt;Name: &lt;input type="text" name="name"&gt;&lt;/p&gt;
+  &lt;p&gt;Message:&lt;br&gt;
+    &lt;textarea name="message"&gt;&lt;/textarea&gt;
+  &lt;/p&gt;
+  &lt;input type="submit" value="Send"&gt;
+&lt;/form&gt;
+</code>
+        </pre>
+      </section>
+
+      <section>
+        <h2>HTML 3.2 (1997)</h2>
+        <ul>
+          <li>
+            Added tables with <code>&lt;table&gt;</code>,
+            <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code>,
+            and more form elements.
+          </li>
+          <li>
+            Included many presentational tags like
+            <code>&lt;font&gt;</code> and <code>&lt;center&gt;</code>, now
+            replaced by CSS.
+          </li>
+          <li>Reflected what browsers of that time (Netscape, IE) already supported.</li>
+        </ul>
+        <h3>Example table and presentational tags</h3>
+        <pre>
+<code>&lt;center&gt;
+  &lt;font face="Arial" color="blue"&gt;My Table&lt;/font&gt;
+&lt;/center&gt;
+
+&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Age&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Ali&lt;/td&gt;
+    &lt;td&gt;20&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code>
+        </pre>
+      </section>
+
+      <section>
+        <h2>HTML 4.01 (1999)</h2>
+        <ul>
+          <li>Improved structure and accessibility ideas.</li>
+          <li>Encouraged separating content (HTML) from presentation (CSS).</li>
+          <li>
+            Defined three flavors: <strong>Strict</strong>,
+            <strong>Transitional</strong>, and <strong>Frameset</strong>.
+          </li>
+        </ul>
+        <h3>HTML 4.01 Strict DOCTYPE example</h3>
+        <pre>
+<code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;HTML 4.01 Example&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+        </pre>
+      </section>
+
+      <section>
+        <h2>XHTML 1.0 (2000)</h2>
+        <ul>
+          <li>
+            Re‑wrote HTML 4.01 as XML – very strict syntax rules.
+          </li>
+          <li>
+            Required lowercase tags, quoted attributes, and proper nesting, for
+            example <code>&lt;br /&gt;</code> instead of <code>&lt;br&gt;</code>.
+          </li>
+          <li>Popular for a while, but later HTML5 became more dominant.</li>
+        </ul>
+        <h3>XHTML 1.0 Strict example</h3>
+        <pre>
+<code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+    &lt;title&gt;XHTML page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello&lt;/h1&gt;
+    &lt;p&gt;All tags are closed properly.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+        </pre>
+      </section>
+
+      <section>
+        <h2>HTML5 (from around 2010)</h2>
+        <ul>
+          <li>Current major version of HTML used on most modern websites.</li>
+          <li>
+            Added many new features:
+            <ul>
+              <li>Semantic tags: <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;footer&gt;</code>.</li>
+              <li>Built‑in support for <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code>.</li>
+              <li><code>&lt;canvas&gt;</code> and SVG support for graphics.</li>
+              <li>New form input types: email, url, date, range, color, etc.</li>
+            </ul>
+          </li>
+          <li>Designed to work with CSS3 and JavaScript to build rich web apps.</li>
+        </ul>
+        <h3>Simpler HTML5 DOCTYPE and semantic tags</h3>
+        <pre>
+<code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;title&gt;HTML5 Example&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;header&gt;
+      &lt;h1&gt;My Site&lt;/h1&gt;
+      &lt;nav&gt;
+        &lt;a href="#"&gt;Home&lt;/a&gt;
+      &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+      &lt;article&gt;
+        &lt;h2&gt;Post title&lt;/h2&gt;
+        &lt;p&gt;Post content...&lt;/p&gt;
+      &lt;/article&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;© 2025&lt;/footer&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+        </pre>
+      </section>
+
+      <section>
+        <h2>Living standard (HTML today)</h2>
+        <ul>
+          <li>HTML is now maintained as a “living standard” — it is updated over time instead of frozen versions.</li>
+          <li>New features are added gradually as browsers agree and implement them.</li>
+          <li>As a beginner, it is enough to think in terms of “HTML5 and later”.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <hr />
+      <p><a href="index.html">Back to Home</a></p>
+    </footer>
+  </body>
+</html>
+
+
