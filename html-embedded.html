@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embedded Content</title>
+  </head>
+  <body>
+    <header>
+      <h1>Embedded Content</h1>
+      <nav>
+        <a href="index.html">Home</a> |
+        <a href="html-embedded.html">Embedded</a>
+      </nav>
+      <hr />
+    </header>
+
+    <main>
+      <h2>Embedding External Content</h2>
+      <p>
+        These tags let you embed content from other sources or embed other web
+        pages.
+      </p>
+
+      <hr />
+
+      <h2>&lt;iframe&gt; - Inline Frame</h2>
+      <p>Embed another webpage inside your page:</p>
+      <iframe
+        src="https://example.com"
+        width="600"
+        height="400"
+        title="Example iframe"
+      ></iframe>
+      <pre><code>&lt;iframe
+  src="https://example.com"
+  width="600"
+  height="400"
+  title="Example iframe"
+&gt;&lt;/iframe&gt;</code></pre>
+
+      <h3>Iframe with Sandbox (for security)</h3>
+      <pre><code>&lt;iframe
+  src="https://example.com"
+  sandbox="allow-scripts"
+  width="600"
+  height="400"
+&gt;&lt;/iframe&gt;</code></pre>
+
+      <h3>Embed YouTube Video</h3>
+      <pre><code>&lt;iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/VIDEO_ID"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+&gt;&lt;/iframe&gt;</code></pre>
+
+      <h3>Embed Google Maps</h3>
+      <pre><code>&lt;iframe
+  src="https://www.google.com/maps/embed?pb=MAP_PARAMETERS"
+  width="600"
+  height="450"
+  style="border:0;"
+  allowfullscreen=""
+  loading="lazy"
+&gt;&lt;/iframe&gt;</code></pre>
+
+      <hr />
+
+      <h2>&lt;object&gt; - Embedded Object</h2>
+      <p>Embed external resources like PDFs, Flash, or other plugins:</p>
+      <pre><code>&lt;object data="document.pdf" type="application/pdf" width="600" height="400"&gt;
+  &lt;p&gt;Your browser doesn't support PDFs. &lt;a href="document.pdf"&gt;Download it here&lt;/a&gt;.&lt;/p&gt;
+&lt;/object&gt;</code></pre>
+
+      <h3>Embed Flash (legacy, rarely used now)</h3>
+      <pre><code>&lt;object data="animation.swf" type="application/x-shockwave-flash"&gt;
+  &lt;param name="movie" value="animation.swf" /&gt;
+  &lt;p&gt;Flash not supported&lt;/p&gt;
+&lt;/object&gt;</code></pre>
+
+      <hr />
+
+      <h2>&lt;embed&gt; - Embed External Content</h2>
+      <p>Similar to object, but simpler syntax:</p>
+      <pre><code>&lt;embed src="video.mp4" type="video/mp4" width="600" height="400" /&gt;</code></pre>
+
+      <h3>Embed PDF</h3>
+      <pre><code>&lt;embed src="document.pdf" type="application/pdf" width="600" height="400" /&gt;</code></pre>
+
+      <hr />
+
+      <h2>&lt;param&gt; - Parameters for Object</h2>
+      <p>Used inside &lt;object&gt; to pass parameters:</p>
+      <pre><code>&lt;object data="video.swf" type="application/x-shockwave-flash"&gt;
+  &lt;param name="autoplay" value="true" /&gt;
+  &lt;param name="loop" value="false" /&gt;
+&lt;/object&gt;</code></pre>
+
+      <hr />
+
+      <h2>When to Use Each</h2>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Tag</th>
+            <th>Best For</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>&lt;iframe&gt;</td>
+            <td>Embedding web pages, videos, maps</td>
+            <td>YouTube, Google Maps, other websites</td>
+          </tr>
+          <tr>
+            <td>&lt;object&gt;</td>
+            <td>PDFs, plugins, external resources</td>
+            <td>PDF documents, Flash content</td>
+          </tr>
+          <tr>
+            <td>&lt;embed&gt;</td>
+            <td>Simple embedding (less control)</td>
+            <td>Videos, PDFs, images</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <pre><code>&lt;!-- For web pages and videos: use iframe --&gt;
+&lt;iframe src="https://example.com" width="800" height="600"&gt;&lt;/iframe&gt;
+
+&lt;!-- For PDFs: use object or embed --&gt;
+&lt;object data="file.pdf" type="application/pdf"&gt;
+  &lt;p&gt;PDF not supported&lt;/p&gt;
+&lt;/object&gt;</code></pre>
+
+      <hr />
+
+      <h2>Security Considerations</h2>
+      <ul>
+        <li>Always use <code>sandbox</code> attribute with iframes when embedding untrusted content</li>
+        <li>Use <code>title</code> attribute for accessibility</li>
+        <li>Provide fallback content inside &lt;object&gt; for browsers that don't support it</li>
+        <li>Be careful with <code>allowfullscreen</code> - only use for trusted sources</li>
+      </ul>
+
+      <pre><code>&lt;!-- Secure iframe example --&gt;
+&lt;iframe
+  src="https://trusted-site.com"
+  sandbox="allow-scripts allow-same-origin"
+  title="Trusted content"
+  width="600"
+  height="400"
+&gt;
+  &lt;p&gt;Your browser doesn't support iframes.&lt;/p&gt;
+&lt;/iframe&gt;</code></pre>
+    </main>
+
+    <footer>
+      <hr />
+      <p><a href="index.html">Back to Home</a></p>
+    </footer>
+  </body>
+</html>
+

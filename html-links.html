@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Links &amp; Anchors</title>
+  </head>
+  <body>
+    <header>
+      <h1>HTML Links &amp; Anchors</h1>
+      <nav>
+        <a href="index.html">Home</a> |
+        <a href="html-links.html">Links</a>
+      </nav>
+      <hr />
+    </header>
+
+    <main>
+      <h2>Basic Links</h2>
+      <p>External link to another website:</p>
+      <p><a href="https://github.com">Visit GitHub</a></p>
+      <pre><code>&lt;a href="https://github.com"&gt;Visit GitHub&lt;/a&gt;</code></pre>
+
+      <p>Link that opens in a new tab:</p>
+      <p><a href="https://github.com" target="_blank">GitHub (new tab)</a></p>
+      <pre><code>&lt;a href="https://github.com" target="_blank"&gt;GitHub (new tab)&lt;/a&gt;</code></pre>
+
+      <hr />
+
+      <h2>Internal Page Links</h2>
+      <p>Link to another page in your site:</p>
+      <p><a href="index.html">Go to Home</a></p>
+      <pre><code>&lt;a href="index.html"&gt;Go to Home&lt;/a&gt;</code></pre>
+
+      <p>Link to a section on the same page (anchor):</p>
+      <p><a href="#section1">Jump to Section 1</a></p>
+      <pre><code>&lt;a href="#section1"&gt;Jump to Section 1&lt;/a&gt;
+&lt;!-- Later in the page --&gt;
+&lt;h2 id="section1"&gt;Section 1&lt;/h2&gt;</code></pre>
+
+      <section id="section1">
+        <h3>Section 1 (anchor target)</h3>
+        <p>This section has <code>id="section1"</code> so links can jump here.</p>
+      </section>
+
+      <hr />
+
+      <h2>Email Links</h2>
+      <p>Click to open email client:</p>
+      <p><a href="mailto:example@email.com">Send Email</a></p>
+      <pre><code>&lt;a href="mailto:example@email.com"&gt;Send Email&lt;/a&gt;</code></pre>
+
+      <p>Email with subject and body:</p>
+      <p><a href="mailto:example@email.com?subject=Hello&body=Hi there">Email with subject</a></p>
+      <pre><code>&lt;a href="mailto:example@email.com?subject=Hello&amp;body=Hi there"&gt;Email with subject&lt;/a&gt;</code></pre>
+
+      <hr />
+
+      <h2>Phone Links</h2>
+      <p>Click to call on mobile:</p>
+      <p><a href="tel:+1234567890">Call Us</a></p>
+      <pre><code>&lt;a href="tel:+1234567890"&gt;Call Us&lt;/a&gt;</code></pre>
+
+      <hr />
+
+      <h2>Download Links</h2>
+      <p>Link that downloads a file:</p>
+      <p><a href="README.md" download>Download README</a></p>
+      <pre><code>&lt;a href="README.md" download&gt;Download README&lt;/a&gt;</code></pre>
+
+      <p>Download with custom filename:</p>
+      <p><a href="README.md" download="my-readme.txt">Download as my-readme.txt</a></p>
+      <pre><code>&lt;a href="README.md" download="my-readme.txt"&gt;Download as my-readme.txt&lt;/a&gt;</code></pre>
+
+      <hr />
+
+      <h2>Link Relationships (rel attribute)</h2>
+      <p>External link with rel="noopener noreferrer" for security:</p>
+      <p><a href="https://github.com" target="_blank" rel="noopener noreferrer">Secure External Link</a></p>
+      <pre><code>&lt;a href="https://github.com" target="_blank" rel="noopener noreferrer"&gt;Secure External Link&lt;/a&gt;</code></pre>
+
+      <p>Link to next page:</p>
+      <p><a href="index.html" rel="next">Next Page</a></p>
+      <pre><code>&lt;a href="index.html" rel="next"&gt;Next Page&lt;/a&gt;</code></pre>
+
+      <p>Link to previous page:</p>
+      <p><a href="index.html" rel="prev">Previous Page</a></p>
+      <pre><code>&lt;a href="index.html" rel="prev"&gt;Previous Page&lt;/a&gt;</code></pre>
+
+      <hr />
+
+      <h2>Link with Title Tooltip</h2>
+      <p>Hover over this link to see a tooltip:</p>
+      <p><a href="https://github.com" title="Visit GitHub homepage">GitHub (hover me)</a></p>
+      <pre><code>&lt;a href="https://github.com" title="Visit GitHub homepage"&gt;GitHub (hover me)&lt;/a&gt;</code></pre>
+
+      <hr />
+
+      <h2>Disabled/Non-clickable Link</h2>
+      <p>Link that doesn't go anywhere (using # or javascript:void(0)):</p>
+      <p><a href="#">Placeholder Link</a></p>
+      <pre><code>&lt;a href="#"&gt;Placeholder Link&lt;/a&gt;
+&lt;!-- or --&gt;
+&lt;a href="javascript:void(0)"&gt;Non-clickable Link&lt;/a&gt;</code></pre>
+    </main>
+
+    <footer>
+      <hr />
+      <p><a href="index.html">Back to Home</a></p>
+    </footer>
+  </body>
+</html>
+

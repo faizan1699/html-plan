@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessibility in HTML</title>
+  </head>
+  <body>
+    <header>
+      <h1>Accessibility in HTML</h1>
+      <nav>
+        <a href="index.html">Home</a> |
+        <a href="html-accessibility.html">Accessibility</a>
+      </nav>
+      <hr />
+    </header>
+
+    <main>
+      <h2>What is Accessibility?</h2>
+      <p>
+        Accessibility (a11y) means making your website usable by everyone,
+        including people with disabilities. HTML provides many features to help
+        with this.
+      </p>
+
+      <hr />
+
+      <h2>Semantic HTML</h2>
+      <p>Use semantic tags instead of generic divs:</p>
+      <pre><code>&lt;!-- Good: Semantic --&gt;
+&lt;header&gt;
+  &lt;nav&gt;...&lt;/nav&gt;
+&lt;/header&gt;
+&lt;main&gt;
+  &lt;article&gt;...&lt;/article&gt;
+&lt;/main&gt;
+&lt;footer&gt;...&lt;/footer&gt;
+
+&lt;!-- Bad: Generic divs --&gt;
+&lt;div class="header"&gt;
+  &lt;div class="nav"&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+      <hr />
+
+      <h2>Alt Text for Images</h2>
+      <p>Always provide descriptive alt text:</p>
+      <img src="https://via.placeholder.com/150" alt="A red circle placeholder image" />
+      <pre><code>&lt;!-- Good: Descriptive alt text --&gt;
+&lt;img src="photo.jpg" alt="A red circle placeholder image" /&gt;
+
+&lt;!-- Decorative images should have empty alt --&gt;
+&lt;img src="decoration.jpg" alt="" /&gt;
+
+&lt;!-- Bad: Missing alt attribute --&gt;
+&lt;img src="photo.jpg" /&gt;</code></pre>
+
+      <hr />
+
+      <h2>ARIA Attributes</h2>
+      <h3>aria-label</h3>
+      <p>Provides a label when there's no visible text:</p>
+      <button aria-label="Close dialog">X</button>
+      <pre><code>&lt;button aria-label="Close dialog"&gt;X&lt;/button&gt;</code></pre>
+
+      <h3>aria-labelledby</h3>
+      <p>References another element that labels this one:</p>
+      <div>
+        <h3 id="form-title">Contact Form</h3>
+        <form aria-labelledby="form-title">
+          <input type="text" />
+        </form>
+      </div>
+      <pre><code>&lt;h3 id="form-title"&gt;Contact Form&lt;/h3&gt;
+&lt;form aria-labelledby="form-title"&gt;
+  &lt;input type="text" /&gt;
+&lt;/form&gt;</code></pre>
+
+      <h3>aria-describedby</h3>
+      <p>References element that describes this one:</p>
+      <div>
+        <label for="email">Email:</label>
+        <input id="email" type="email" aria-describedby="email-help" />
+        <p id="email-help">We'll never share your email</p>
+      </div>
+      <pre><code>&lt;label for="email"&gt;Email:&lt;/label&gt;
+&lt;input id="email" type="email" aria-describedby="email-help" /&gt;
+&lt;p id="email-help"&gt;We'll never share your email&lt;/p&gt;</code></pre>
+
+      <h3>aria-hidden</h3>
+      <p>Hide decorative elements from screen readers:</p>
+      <span aria-hidden="true">✨</span>
+      <pre><code>&lt;span aria-hidden="true"&gt;✨&lt;/span&gt;</code></pre>
+
+      <h3>aria-live</h3>
+      <p>Announce dynamic content changes:</p>
+      <div aria-live="polite" id="status">Status messages appear here</div>
+      <pre><code>&lt;div aria-live="polite" id="status"&gt;Status messages appear here&lt;/div&gt;</code></pre>
+
+      <hr />
+
+      <h2>Form Labels</h2>
+      <p>Always associate labels with inputs:</p>
+      <form>
+        <label for="username">Username:</label>
+        <input id="username" type="text" name="username" />
+      </form>
+      <pre><code>&lt;!-- Good: Label associated with input --&gt;
+&lt;label for="username"&gt;Username:&lt;/label&gt;
+&lt;input id="username" type="text" name="username" /&gt;
+
+&lt;!-- Also good: Wrapped label --&gt;
+&lt;label&gt;
+  Username:
+  &lt;input type="text" name="username" /&gt;
+&lt;/label&gt;</code></pre>
+
+      <hr />
+
+      <h2>Heading Hierarchy</h2>
+      <p>Use headings in order (h1, h2, h3...):</p>
+      <pre><code>&lt;h1&gt;Main Title&lt;/h1&gt;
+  &lt;h2&gt;Section Title&lt;/h2&gt;
+    &lt;h3&gt;Subsection&lt;/h3&gt;
+  &lt;h2&gt;Another Section&lt;/h2&gt;
+
+&lt;!-- Bad: Skipping levels --&gt;
+&lt;h1&gt;Title&lt;/h1&gt;
+&lt;h3&gt;Subtitle&lt;/h3&gt; &lt;!-- Should be h2 --&gt;</code></pre>
+
+      <hr />
+
+      <h2>Keyboard Navigation</h2>
+      <p>Make sure all interactive elements are keyboard accessible:</p>
+      <pre><code>&lt;!-- Good: Button is keyboard accessible --&gt;
+&lt;button type="button"&gt;Click me&lt;/button&gt;
+
+&lt;!-- Bad: Div with click handler (not keyboard accessible) --&gt;
+&lt;div onclick="doSomething()"&gt;Click me&lt;/div&gt;
+
+&lt;!-- Good: Use tabindex for custom elements --&gt;
+&lt;div role="button" tabindex="0"&gt;Custom Button&lt;/div&gt;</code></pre>
+
+      <hr />
+
+      <h2>Skip Links</h2>
+      <p>Allow users to skip to main content:</p>
+      <a href="#main-content" style="position: absolute; left: -9999px;">Skip to main content</a>
+      <pre><code>&lt;a href="#main-content" style="position: absolute; left: -9999px;"&gt;Skip to main content&lt;/a&gt;
+&lt;main id="main-content"&gt;
+  &lt;!-- Main content here --&gt;
+&lt;/main&gt;</code></pre>
+
+      <hr />
+
+      <h2>Language Attribute</h2>
+      <p>Always specify the page language:</p>
+      <pre><code>&lt;html lang="en"&gt;
+&lt;!-- For Urdu --&gt;
+&lt;html lang="ur" dir="rtl"&gt;</code></pre>
+
+      <hr />
+
+      <h2>Table Accessibility</h2>
+      <p>Use proper table structure:</p>
+      <table border="1">
+        <caption>Student Grades</caption>
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">John</th>
+            <td>95</td>
+          </tr>
+        </tbody>
+      </table>
+      <pre><code>&lt;table&gt;
+  &lt;caption&gt;Student Grades&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Name&lt;/th&gt;
+      &lt;th scope="col"&gt;Grade&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;John&lt;/th&gt;
+      &lt;td&gt;95&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+      <hr />
+
+      <h2>Complete Accessible Example</h2>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;title&gt;Accessible Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;a href="#main"&gt;Skip to main content&lt;/a&gt;
+  
+  &lt;header&gt;
+    &lt;nav aria-label="Main navigation"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;main id="main"&gt;
+    &lt;h1&gt;Page Title&lt;/h1&gt;
+    
+    &lt;article&gt;
+      &lt;h2&gt;Article Title&lt;/h2&gt;
+      &lt;img src="photo.jpg" alt="Description of the image" /&gt;
+      &lt;p&gt;Article content...&lt;/p&gt;
+    &lt;/article&gt;
+
+    &lt;form aria-labelledby="form-title"&gt;
+      &lt;h2 id="form-title"&gt;Contact Form&lt;/h2&gt;
+      &lt;label for="email"&gt;Email:&lt;/label&gt;
+      &lt;input id="email" type="email" aria-describedby="email-help" required /&gt;
+      &lt;p id="email-help"&gt;We'll never share your email&lt;/p&gt;
+      &lt;button type="submit"&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;&copy; 2025 My Site&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </main>
+
+    <footer>
+      <hr />
+      <p><a href="index.html">Back to Home</a></p>
+    </footer>
+  </body>
+</html>
+

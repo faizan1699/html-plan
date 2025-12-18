@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meta Tags &amp; SEO</title>
+  </head>
+  <body>
+    <header>
+      <h1>Meta Tags &amp; SEO Basics</h1>
+      <nav>
+        <a href="index.html">Home</a> |
+        <a href="html-meta-seo.html">Meta &amp; SEO</a>
+      </nav>
+      <hr />
+    </header>
+
+    <main>
+      <h2>What are Meta Tags?</h2>
+      <p>
+        Meta tags provide information about your webpage to browsers and search
+        engines. They go inside the <code>&lt;head&gt;</code> section.
+      </p>
+
+      <hr />
+
+      <h2>Basic Meta Tags</h2>
+      <h3>Character Encoding</h3>
+      <p>Always include this first in your &lt;head&gt;:</p>
+      <pre><code>&lt;meta charset="UTF-8" /&gt;</code></pre>
+
+      <h3>Viewport (for mobile devices)</h3>
+      <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</code></pre>
+
+      <h3>Description</h3>
+      <p>Short description of your page (shown in search results):</p>
+      <pre><code>&lt;meta name="description" content="Learn HTML with examples and tutorials" /&gt;</code></pre>
+
+      <h3>Keywords (less important now)</h3>
+      <pre><code>&lt;meta name="keywords" content="HTML, web development, tutorial, learn" /&gt;</code></pre>
+
+      <h3>Author</h3>
+      <pre><code>&lt;meta name="author" content="Your Name" /&gt;</code></pre>
+
+      <h3>Robots</h3>
+      <p>Tell search engines how to index your page:</p>
+      <pre><code>&lt;meta name="robots" content="index, follow" /&gt;
+&lt;!-- Other options: noindex, nofollow --&gt;</code></pre>
+
+      <hr />
+
+      <h2>Open Graph Tags (for social media)</h2>
+      <p>These tags help when your page is shared on Facebook, Twitter, etc.:</p>
+      <pre><code>&lt;meta property="og:title" content="My HTML Learning Site" /&gt;
+&lt;meta property="og:description" content="Learn HTML with examples" /&gt;
+&lt;meta property="og:image" content="https://example.com/image.jpg" /&gt;
+&lt;meta property="og:url" content="https://example.com" /&gt;
+&lt;meta property="og:type" content="website" /&gt;</code></pre>
+
+      <hr />
+
+      <h2>Twitter Card Tags</h2>
+      <p>For better previews when shared on Twitter:</p>
+      <pre><code>&lt;meta name="twitter:card" content="summary_large_image" /&gt;
+&lt;meta name="twitter:title" content="My HTML Learning Site" /&gt;
+&lt;meta name="twitter:description" content="Learn HTML with examples" /&gt;
+&lt;meta name="twitter:image" content="https://example.com/image.jpg" /&gt;</code></pre>
+
+      <hr />
+
+      <h2>Refresh/Redirect</h2>
+      <p>Auto-refresh page after 5 seconds:</p>
+      <pre><code>&lt;meta http-equiv="refresh" content="5" /&gt;</code></pre>
+
+      <p>Redirect to another page after 3 seconds:</p>
+      <pre><code>&lt;meta http-equiv="refresh" content="3;url=https://example.com" /&gt;</code></pre>
+
+      <hr />
+
+      <h2>Language</h2>
+      <pre><code>&lt;html lang="en"&gt;
+&lt;!-- For Urdu: lang="ur" --&gt;
+&lt;html lang="ur" dir="rtl"&gt;</code></pre>
+
+      <hr />
+
+      <h2>Complete Head Example</h2>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  &lt;meta name="description" content="Learn HTML with examples" /&gt;
+  &lt;meta name="author" content="Your Name" /&gt;
+  &lt;meta name="robots" content="index, follow" /&gt;
+  
+  &lt;!-- Open Graph --&gt;
+  &lt;meta property="og:title" content="My HTML Site" /&gt;
+  &lt;meta property="og:description" content="Learn HTML" /&gt;
+  &lt;meta property="og:type" content="website" /&gt;
+  
+  &lt;title&gt;My HTML Learning Site&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- Your content --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+      <hr />
+
+      <h2>SEO Best Practices</h2>
+      <ul>
+        <li>Use descriptive &lt;title&gt; tags (50-60 characters)</li>
+        <li>Write good meta descriptions (150-160 characters)</li>
+        <li>Use semantic HTML (header, nav, main, article, footer)</li>
+        <li>Add alt text to images</li>
+        <li>Use proper heading hierarchy (h1, h2, h3...)</li>
+        <li>Include keywords naturally in your content</li>
+      </ul>
+
+      <pre><code>&lt;!-- Good title --&gt;
+&lt;title&gt;Learn HTML: Complete Guide with Examples&lt;/title&gt;
+
+&lt;!-- Good description --&gt;
+&lt;meta name="description" content="Master HTML with step-by-step tutorials, code examples, and interactive exercises. Perfect for beginners." /&gt;</code></pre>
+    </main>
+
+    <footer>
+      <hr />
+      <p><a href="index.html">Back to Home</a></p>
+    </footer>
+  </body>
+</html>
+

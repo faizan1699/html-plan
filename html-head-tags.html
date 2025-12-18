@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Head Section Tags</title>
+  </head>
+  <body>
+    <header>
+      <h1>Head Section Tags</h1>
+      <nav>
+        <a href="index.html">Home</a> |
+        <a href="html-head-tags.html">Head Tags</a>
+      </nav>
+      <hr />
+    </header>
+
+    <main>
+      <h2>Tags That Go in &lt;head&gt;</h2>
+      <p>
+        The <code>&lt;head&gt;</code> section contains metadata and links to
+        external resources. It's not visible on the page.
+      </p>
+
+      <hr />
+
+      <h2>&lt;title&gt; - Page Title</h2>
+      <p>Shows in the browser tab and search results:</p>
+      <pre><code>&lt;title&gt;My HTML Learning Site&lt;/title&gt;</code></pre>
+
+      <hr />
+
+      <h2>&lt;meta&gt; - Metadata</h2>
+      <p>We covered meta tags in the Meta &amp; SEO page. Here are the basics:</p>
+      <pre><code>&lt;meta charset="UTF-8" /&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+&lt;meta name="description" content="Learn HTML" /&gt;</code></pre>
+
+      <hr />
+
+      <h2>&lt;link&gt; - External Resources</h2>
+      <h3>Link to CSS Stylesheet</h3>
+      <pre><code>&lt;link rel="stylesheet" href="styles.css" /&gt;</code></pre>
+
+      <h3>Link to Favicon (icon in browser tab)</h3>
+      <pre><code>&lt;link rel="icon" href="favicon.ico" type="image/x-icon" /&gt;
+&lt;!-- Or PNG --&gt;
+&lt;link rel="icon" href="favicon.png" type="image/png" /&gt;</code></pre>
+
+      <h3>Preconnect to External Domain (for faster loading)</h3>
+      <pre><code>&lt;link rel="preconnect" href="https://fonts.googleapis.com" /&gt;</code></pre>
+
+      <h3>DNS Prefetch</h3>
+      <pre><code>&lt;link rel="dns-prefetch" href="https://cdn.example.com" /&gt;</code></pre>
+
+      <h3>Canonical URL (for SEO)</h3>
+      <pre><code>&lt;link rel="canonical" href="https://example.com/page" /&gt;</code></pre>
+
+      <h3>Alternate Language Versions</h3>
+      <pre><code>&lt;link rel="alternate" hreflang="ur" href="https://example.com/ur" /&gt;
+&lt;link rel="alternate" hreflang="en" href="https://example.com/en" /&gt;</code></pre>
+
+      <hr />
+
+      <h2>&lt;base&gt; - Base URL</h2>
+      <p>Sets a base URL for all relative links on the page:</p>
+      <pre><code>&lt;base href="https://example.com/" /&gt;
+&lt;!-- Now all relative links will use this base --&gt;
+&lt;a href="about.html"&gt;About&lt;/a&gt; &lt;!-- Becomes https://example.com/about.html --&gt;</code></pre>
+
+      <p><strong>Note:</strong> Use carefully - it affects ALL relative URLs!</p>
+
+      <hr />
+
+      <h2>&lt;style&gt; - Inline CSS</h2>
+      <p>Add CSS directly in the HTML (not recommended for large styles):</p>
+      <pre><code>&lt;style&gt;
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  h1 {
+    color: blue;
+  }
+&lt;/style&gt;</code></pre>
+
+      <hr />
+
+      <h2>&lt;script&gt; - JavaScript</h2>
+      <h3>Inline JavaScript</h3>
+      <pre><code>&lt;script&gt;
+  console.log('Hello from HTML!');
+&lt;/script&gt;</code></pre>
+
+      <h3>External JavaScript File</h3>
+      <pre><code>&lt;script src="script.js"&gt;&lt;/script&gt;</code></pre>
+
+      <h3>Script with Defer (loads after HTML)</h3>
+      <pre><code>&lt;script src="script.js" defer&gt;&lt;/script&gt;</code></pre>
+
+      <h3>Script with Async (loads in parallel)</h3>
+      <pre><code>&lt;script src="script.js" async&gt;&lt;/script&gt;</code></pre>
+
+      <hr />
+
+      <h2>&lt;noscript&gt; - Fallback Content</h2>
+      <p>Shows content if JavaScript is disabled:</p>
+      <pre><code>&lt;noscript&gt;
+  &lt;p&gt;Please enable JavaScript to use this website.&lt;/p&gt;
+&lt;/noscript&gt;</code></pre>
+
+      <hr />
+
+      <h2>Complete Head Example</h2>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  &lt;meta name="description" content="Learn HTML with examples" /&gt;
+  &lt;meta name="author" content="Your Name" /&gt;
+  
+  &lt;title&gt;My HTML Learning Site&lt;/title&gt;
+  
+  &lt;link rel="icon" href="favicon.ico" type="image/x-icon" /&gt;
+  &lt;link rel="stylesheet" href="styles.css" /&gt;
+  &lt;link rel="canonical" href="https://example.com" /&gt;
+  
+  &lt;style&gt;
+    /* Small inline styles if needed */
+  &lt;/style&gt;
+  
+  &lt;script src="main.js" defer&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- Your content --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </main>
+
+    <footer>
+      <hr />
+      <p><a href="index.html">Back to Home</a></p>
+    </footer>
+  </body>
+</html>
+

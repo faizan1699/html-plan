@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Entities &amp; Special Characters</title>
+  </head>
+  <body>
+    <header>
+      <h1>HTML Entities &amp; Special Characters</h1>
+      <nav>
+        <a href="index.html">Home</a> |
+        <a href="html-entities.html">Entities</a>
+      </nav>
+      <hr />
+    </header>
+
+    <main>
+      <h2>What are HTML Entities?</h2>
+      <p>
+        HTML entities are special codes used to display characters that have
+        special meaning in HTML or are hard to type on a keyboard.
+      </p>
+
+      <hr />
+
+      <h2>Common Reserved Characters</h2>
+      <p>These characters have special meaning in HTML, so you need entities:</p>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Character</th>
+            <th>Entity Name</th>
+            <th>Entity Number</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>&lt;</td>
+            <td>&amp;lt;</td>
+            <td>&amp;#60;</td>
+            <td>&lt;</td>
+          </tr>
+          <tr>
+            <td>&gt;</td>
+            <td>&amp;gt;</td>
+            <td>&amp;#62;</td>
+            <td>&gt;</td>
+          </tr>
+          <tr>
+            <td>&amp;</td>
+            <td>&amp;amp;</td>
+            <td>&amp;#38;</td>
+            <td>&amp;</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>&amp;quot;</td>
+            <td>&amp;#34;</td>
+            <td>&quot;</td>
+          </tr>
+          <tr>
+            <td>&apos;</td>
+            <td>&amp;apos;</td>
+            <td>&amp;#39;</td>
+            <td>&apos;</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <pre><code>&lt;p&gt;Use &amp;lt; for less than &lt; and &amp;gt; for greater than &gt;&lt;/p&gt;
+&lt;p&gt;The ampersand is written as &amp;amp;&lt;/p&gt;
+&lt;p&gt;Quotes: &amp;quot;Hello&amp;quot; and &amp;apos;Hi&amp;apos;&lt;/p&gt;</code></pre>
+
+      <hr />
+
+      <h2>Spacing Entities</h2>
+      <p>Non-breaking space (keeps words together):</p>
+      <p>Hello&nbsp;World (these words won't break apart)</p>
+      <pre><code>&lt;p&gt;Hello&amp;nbsp;World&lt;/p&gt;</code></pre>
+
+      <p>En space (half the width of em space):</p>
+      <p>Hello&#8196;World</p>
+      <pre><code>&lt;p&gt;Hello&amp;#8196;World&lt;/p&gt;</code></pre>
+
+      <p>Em space (wider space):</p>
+      <p>Hello&#8195;World</p>
+      <pre><code>&lt;p&gt;Hello&amp;#8195;World&lt;/p&gt;</code></pre>
+
+      <hr />
+
+      <h2>Copyright &amp; Symbols</h2>
+      <ul>
+        <li>Copyright: &copy; <code>&amp;copy;</code> or <code>&amp;#169;</code></li>
+        <li>Registered: &reg; <code>&amp;reg;</code> or <code>&amp;#174;</code></li>
+        <li>Trademark: &trade; <code>&amp;trade;</code> or <code>&amp;#8482;</code></li>
+      </ul>
+
+      <pre><code>&lt;p&gt;&amp;copy; 2025 My Website&lt;/p&gt;
+&lt;p&gt;Company Name&amp;reg;&lt;/p&gt;
+&lt;p&gt;Product Name&amp;trade;&lt;/p&gt;</code></pre>
+
+      <hr />
+
+      <h2>Currency Symbols</h2>
+      <ul>
+        <li>Euro: &euro; <code>&amp;euro;</code> or <code>&amp;#8364;</code></li>
+        <li>Pound: &pound; <code>&amp;pound;</code> or <code>&amp;#163;</code></li>
+        <li>Yen: &yen; <code>&amp;yen;</code> or <code>&amp;#165;</code></li>
+        <li>Cent: &cent; <code>&amp;cent;</code> or <code>&amp;#162;</code></li>
+        <li>Dollar: $ (can type directly, or <code>&amp;#36;</code>)</li>
+      </ul>
+
+      <pre><code>&lt;p&gt;Price: &amp;euro;50&lt;/p&gt;
+&lt;p&gt;Cost: &amp;pound;30&lt;/p&gt;
+&lt;p&gt;Amount: &amp;yen;1000&lt;/p&gt;</code></pre>
+
+      <hr />
+
+      <h2>Math Symbols</h2>
+      <ul>
+        <li>Plus/Minus: &plusmn; <code>&amp;plusmn;</code></li>
+        <li>Times: &times; <code>&amp;times;</code></li>
+        <li>Division: &divide; <code>&amp;divide;</code></li>
+        <li>Not equal: &ne; <code>&amp;ne;</code></li>
+        <li>Less than or equal: &le; <code>&amp;le;</code></li>
+        <li>Greater than or equal: &ge; <code>&amp;ge;</code></li>
+        <li>Infinity: &infin; <code>&amp;infin;</code></li>
+      </ul>
+
+      <pre><code>&lt;p&gt;5 &amp;plusmn; 2 = 3 or 7&lt;/p&gt;
+&lt;p&gt;4 &amp;times; 3 = 12&lt;/p&gt;
+&lt;p&gt;10 &amp;divide; 2 = 5&lt;/p&gt;
+&lt;p&gt;x &amp;ne; y&lt;/p&gt;</code></pre>
+
+      <hr />
+
+      <h2>Arrows</h2>
+      <ul>
+        <li>Left: &larr; <code>&amp;larr;</code></li>
+        <li>Right: &rarr; <code>&amp;rarr;</code></li>
+        <li>Up: &uarr; <code>&amp;uarr;</code></li>
+        <li>Down: &darr; <code>&amp;darr;</code></li>
+        <li>Left-Right: &harr; <code>&amp;harr;</code></li>
+      </ul>
+
+      <pre><code>&lt;p&gt;Go &amp;larr; left or &amp;rarr; right&lt;/p&gt;
+&lt;p&gt;Scroll &amp;uarr; up or &amp;darr; down&lt;/p&gt;</code></pre>
+
+      <hr />
+
+      <h2>Greek Letters</h2>
+      <ul>
+        <li>Alpha: &alpha; <code>&amp;alpha;</code></li>
+        <li>Beta: &beta; <code>&amp;beta;</code></li>
+        <li>Gamma: &gamma; <code>&amp;gamma;</code></li>
+        <li>Pi: &pi; <code>&amp;pi;</code></li>
+        <li>Omega: &Omega; <code>&amp;Omega;</code></li>
+      </ul>
+
+      <pre><code>&lt;p&gt;The Greek letter alpha is &amp;alpha;&lt;/p&gt;
+&lt;p&gt;Pi equals &amp;pi;&lt;/p&gt;</code></pre>
+
+      <hr />
+
+      <h2>Emojis in HTML</h2>
+      <p>You can use emojis directly (if your editor supports them):</p>
+      <p>&#128512; &#128515; &#128516; &#128525; &#128526;</p>
+      <pre><code>&lt;p&gt;&amp;#128512; &amp;#128515; &amp;#128516;&lt;/p&gt;
+&lt;!-- Or type directly if supported: 😀 😃 😄 --&gt;</code></pre>
+
+      <p>Common emoji codes:</p>
+      <ul>
+        <li>Smile: &#128512; <code>&amp;#128512;</code></li>
+        <li>Heart: &#10084; <code>&amp;#10084;</code></li>
+        <li>Thumbs up: &#128077; <code>&amp;#128077;</code></li>
+        <li>Star: &#11088; <code>&amp;#11088;</code></li>
+      </ul>
+    </main>
+
+    <footer>
+      <hr />
+      <p><a href="index.html">Back to Home</a></p>
+    </footer>
+  </body>
+</html>
+

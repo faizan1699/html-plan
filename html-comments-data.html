@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comments &amp; Data Attributes</title>
+  </head>
+  <body>
+    <header>
+      <h1>HTML Comments &amp; Data Attributes</h1>
+      <nav>
+        <a href="index.html">Home</a> |
+        <a href="html-comments-data.html">Comments &amp; Data</a>
+      </nav>
+      <hr />
+    </header>
+
+    <main>
+      <h2>HTML Comments</h2>
+      <p>
+        Comments are notes in your code that browsers ignore. They're useful
+        for documentation and temporarily hiding code.
+      </p>
+
+      <h3>Basic Comment</h3>
+      <pre><code>&lt;!-- This is a comment --&gt;
+&lt;p&gt;This text is visible&lt;/p&gt;</code></pre>
+
+      <h3>Multi-line Comment</h3>
+      <pre><code>&lt;!--
+  This is a multi-line comment.
+  You can write multiple lines here.
+  Browsers will ignore all of this.
+--&gt;</code></pre>
+
+      <h3>Commenting Out Code</h3>
+      <pre><code>&lt;!-- Temporarily hide this section
+&lt;div&gt;
+  &lt;p&gt;This content is hidden&lt;/p&gt;
+&lt;/div&gt;
+--&gt;</code></pre>
+
+      <h3>Inline Comment</h3>
+      <pre><code>&lt;p&gt;Visible text&lt;/p&gt; &lt;!-- This comment is on the same line --&gt;</code></pre>
+
+      <h3>Comments for Documentation</h3>
+      <pre><code>&lt;!--
+  Navigation Section
+  Contains links to main pages
+--&gt;
+&lt;nav&gt;
+  &lt;a href="index.html"&gt;Home&lt;/a&gt;
+  &lt;a href="about.html"&gt;About&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+
+      <h3>Comments for TODO Notes</h3>
+      <pre><code>&lt;!-- TODO: Add more links here --&gt;
+&lt;!-- FIXME: This needs to be updated --&gt;
+&lt;!-- NOTE: Remember to check this later --&gt;</code></pre>
+
+      <hr />
+
+      <h2>Data Attributes (data-*)</h2>
+      <p>
+        Data attributes let you store custom data in HTML elements. They're
+        useful for JavaScript and CSS.
+      </p>
+
+      <h3>Basic Data Attribute</h3>
+      <div data-user-id="12345" data-role="admin">User Info</div>
+      <pre><code>&lt;div data-user-id="12345" data-role="admin"&gt;User Info&lt;/div&gt;</code></pre>
+
+      <h3>Accessing Data Attributes in JavaScript</h3>
+      <pre><code>&lt;div id="myDiv" data-name="John" data-age="30"&gt;Person&lt;/div&gt;
+
+&lt;script&gt;
+  var div = document.getElementById('myDiv');
+  var name = div.dataset.name; // "John"
+  var age = div.dataset.age;   // "30"
+&lt;/script&gt;</code></pre>
+
+      <h3>Data Attributes for Styling</h3>
+      <div data-status="active">Active Item</div>
+      <pre><code>&lt;div data-status="active"&gt;Active Item&lt;/div&gt;
+
+&lt;style&gt;
+  [data-status="active"] {
+    color: green;
+  }
+&lt;/style&gt;</code></pre>
+
+      <h3>Multiple Data Attributes</h3>
+      <article
+        data-category="tutorial"
+        data-difficulty="beginner"
+        data-language="html"
+      >
+        HTML Tutorial
+      </article>
+      <pre><code>&lt;article
+  data-category="tutorial"
+  data-difficulty="beginner"
+  data-language="html"
+&gt;
+  HTML Tutorial
+&lt;/article&gt;</code></pre>
+
+      <h3>Data Attributes with Numbers</h3>
+      <div data-price="29.99" data-quantity="5">Product</div>
+      <pre><code>&lt;div data-price="29.99" data-quantity="5"&gt;Product&lt;/div&gt;</code></pre>
+
+      <h3>Data Attributes for Forms</h3>
+      <form data-form-type="contact" data-submit-url="/api/contact">
+        <input type="text" name="name" />
+        <button type="submit">Submit</button>
+      </form>
+      <pre><code>&lt;form data-form-type="contact" data-submit-url="/api/contact"&gt;
+  &lt;input type="text" name="name" /&gt;
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+      <hr />
+
+      <h2>Complete Example</h2>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;title&gt;Comments &amp; Data Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- Main Navigation --&gt;
+  &lt;nav data-nav-type="main" data-sticky="true"&gt;
+    &lt;a href="index.html"&gt;Home&lt;/a&gt;
+    &lt;a href="about.html"&gt;About&lt;/a&gt;
+  &lt;/nav&gt;
+
+  &lt;!-- Product List --&gt;
+  &lt;section data-section="products"&gt;
+    &lt;article
+      data-product-id="101"
+      data-price="29.99"
+      data-category="electronics"
+    &gt;
+      &lt;h2&gt;Product Name&lt;/h2&gt;
+      &lt;p&gt;Product description&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/section&gt;
+
+  &lt;script&gt;
+    // Access data attributes
+    var nav = document.querySelector('nav');
+    var navType = nav.dataset.navType; // "main"
+    var isSticky = nav.dataset.sticky; // "true"
+
+    var product = document.querySelector('article');
+    var productId = product.dataset.productId; // "101"
+    var price = product.dataset.price; // "29.99"
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+      <hr />
+
+      <h2>Best Practices</h2>
+      <ul>
+        <li>Use comments to explain complex code</li>
+        <li>Keep comments up-to-date</li>
+        <li>Don't over-comment obvious code</li>
+        <li>Data attributes should start with "data-"</li>
+        <li>Use lowercase with hyphens for data attribute names</li>
+        <li>Data attributes are great for JavaScript selectors</li>
+      </ul>
+    </main>
+
+    <footer>
+      <hr />
+      <p><a href="index.html">Back to Home</a></p>
+    </footer>
+  </body>
+</html>
+

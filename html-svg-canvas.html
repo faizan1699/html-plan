@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG &amp; Canvas</title>
+  </head>
+  <body>
+    <header>
+      <h1>SVG &amp; Canvas</h1>
+      <nav>
+        <a href="index.html">Home</a> |
+        <a href="html-svg-canvas.html">SVG &amp; Canvas</a>
+      </nav>
+      <hr />
+    </header>
+
+    <main>
+      <h2>SVG (Scalable Vector Graphics)</h2>
+      <p>
+        SVG lets you create vector graphics directly in HTML. They scale without
+        losing quality.
+      </p>
+
+      <h3>Simple SVG Circle</h3>
+      <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="2" fill="red" />
+      </svg>
+      <pre><code>&lt;svg width="100" height="100"&gt;
+  &lt;circle cx="50" cy="50" r="40" stroke="black" stroke-width="2" fill="red" /&gt;
+&lt;/svg&gt;</code></pre>
+
+      <h3>SVG Rectangle</h3>
+      <svg width="200" height="100">
+        <rect width="150" height="80" fill="blue" stroke="black" stroke-width="2" />
+      </svg>
+      <pre><code>&lt;svg width="200" height="100"&gt;
+  &lt;rect width="150" height="80" fill="blue" stroke="black" stroke-width="2" /&gt;
+&lt;/svg&gt;</code></pre>
+
+      <h3>SVG Line</h3>
+      <svg width="200" height="100">
+        <line x1="10" y1="10" x2="190" y2="90" stroke="green" stroke-width="3" />
+      </svg>
+      <pre><code>&lt;svg width="200" height="100"&gt;
+  &lt;line x1="10" y1="10" x2="190" y2="90" stroke="green" stroke-width="3" /&gt;
+&lt;/svg&gt;</code></pre>
+
+      <h3>SVG Polygon</h3>
+      <svg width="200" height="200">
+        <polygon points="100,10 150,90 50,90" fill="yellow" stroke="black" stroke-width="2" />
+      </svg>
+      <pre><code>&lt;svg width="200" height="200"&gt;
+  &lt;polygon points="100,10 150,90 50,90" fill="yellow" stroke="black" stroke-width="2" /&gt;
+&lt;/svg&gt;</code></pre>
+
+      <h3>SVG Text</h3>
+      <svg width="200" height="50">
+        <text x="10" y="30" font-family="Arial" font-size="20" fill="purple">Hello SVG!</text>
+      </svg>
+      <pre><code>&lt;svg width="200" height="50"&gt;
+  &lt;text x="10" y="30" font-family="Arial" font-size="20" fill="purple"&gt;Hello SVG!&lt;/text&gt;
+&lt;/svg&gt;</code></pre>
+
+      <h3>SVG Path (Complex Shapes)</h3>
+      <svg width="200" height="200">
+        <path d="M 10 80 Q 100 10, 190 80" stroke="orange" stroke-width="3" fill="none" />
+      </svg>
+      <pre><code>&lt;svg width="200" height="200"&gt;
+  &lt;path d="M 10 80 Q 100 10, 190 80" stroke="orange" stroke-width="3" fill="none" /&gt;
+&lt;/svg&gt;</code></pre>
+
+      <hr />
+
+      <h2>Canvas</h2>
+      <p>
+        Canvas is used for drawing graphics with JavaScript. It's a bitmap (pixel-based) drawing area.
+      </p>
+
+      <h3>Basic Canvas Element</h3>
+      <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+      <pre><code>&lt;canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"&gt;&lt;/canvas&gt;
+
+&lt;script&gt;
+  var canvas = document.getElementById('myCanvas');
+  var ctx = canvas.getContext('2d');
+  ctx.fillStyle = 'red';
+  ctx.fillRect(10, 10, 50, 50);
+&lt;/script&gt;</code></pre>
+
+      <p><strong>Note:</strong> Canvas requires JavaScript to draw. The example above shows the HTML structure. In a real page, you would add JavaScript to draw shapes, lines, and images.</p>
+
+      <h3>Canvas Drawing Example (with inline script)</h3>
+      <canvas id="drawCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+      <script>
+        var canvas = document.getElementById('drawCanvas');
+        if (canvas) {
+          var ctx = canvas.getContext('2d');
+          ctx.fillStyle = 'blue';
+          ctx.fillRect(20, 20, 60, 40);
+          ctx.strokeStyle = 'green';
+          ctx.lineWidth = 3;
+          ctx.strokeRect(100, 30, 50, 30);
+        }
+      </script>
+      <pre><code>&lt;canvas id="drawCanvas" width="200" height="100" style="border:1px solid #000000;"&gt;&lt;/canvas&gt;
+&lt;script&gt;
+  var canvas = document.getElementById('drawCanvas');
+  var ctx = canvas.getContext('2d');
+  ctx.fillStyle = 'blue';
+  ctx.fillRect(20, 20, 60, 40);
+  ctx.strokeStyle = 'green';
+  ctx.lineWidth = 3;
+  ctx.strokeRect(100, 30, 50, 30);
+&lt;/script&gt;</code></pre>
+
+      <hr />
+
+      <h2>SVG vs Canvas</h2>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>SVG</th>
+            <th>Canvas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Type</td>
+            <td>Vector (scalable)</td>
+            <td>Bitmap (pixels)</td>
+          </tr>
+          <tr>
+            <td>JavaScript</td>
+            <td>Optional</td>
+            <td>Required</td>
+          </tr>
+          <tr>
+            <td>DOM Access</td>
+            <td>Yes (each element)</td>
+            <td>No (just the canvas)</td>
+          </tr>
+          <tr>
+            <td>Best For</td>
+            <td>Icons, logos, simple graphics</td>
+            <td>Games, animations, complex drawings</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <pre><code>&lt;!-- SVG: Good for logos, icons, simple graphics --&gt;
+&lt;svg width="100" height="100"&gt;
+  &lt;circle cx="50" cy="50" r="40" fill="red" /&gt;
+&lt;/svg&gt;
+
+&lt;!-- Canvas: Good for games, animations, pixel art --&gt;
+&lt;canvas id="gameCanvas" width="800" height="600"&gt;&lt;/canvas&gt;</code></pre>
+    </main>
+
+    <footer>
+      <hr />
+      <p><a href="index.html">Back to Home</a></p>
+    </footer>
+  </body>
+</html>
+

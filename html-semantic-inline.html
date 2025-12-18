@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semantic Inline Tags</title>
+  </head>
+  <body>
+    <header>
+      <h1>Semantic Inline Tags</h1>
+      <nav>
+        <a href="index.html">Home</a> |
+        <a href="html-semantic-inline.html">Semantic Inline</a>
+      </nav>
+      <hr />
+    </header>
+
+    <main>
+      <h2>More Semantic Inline Elements</h2>
+      <p>
+        These tags give meaning to text, helping browsers and screen readers
+        understand your content better.
+      </p>
+
+      <hr />
+
+      <h2>&lt;abbr&gt; - Abbreviation</h2>
+      <p>
+        Use for abbreviations. Hover to see the full form:
+        <abbr title="HyperText Markup Language">HTML</abbr>
+      </p>
+      <pre><code>&lt;p&gt;Learn &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; today!&lt;/p&gt;</code></pre>
+
+      <hr />
+
+      <h2>&lt;cite&gt; - Citation</h2>
+      <p>
+        Use for titles of works (books, articles, etc.):
+        <cite>The HTML Handbook</cite> is a great resource.
+      </p>
+      <pre><code>&lt;p&gt;&lt;cite&gt;The HTML Handbook&lt;/cite&gt; is a great resource.&lt;/p&gt;</code></pre>
+
+      <hr />
+
+      <h2>&lt;dfn&gt; - Definition</h2>
+      <p>
+        Use for the term being defined:
+        <dfn>HTML</dfn> stands for HyperText Markup Language.
+      </p>
+      <pre><code>&lt;p&gt;&lt;dfn&gt;HTML&lt;/dfn&gt; stands for HyperText Markup Language.&lt;/p&gt;</code></pre>
+
+      <hr />
+
+      <h2>&lt;kbd&gt; - Keyboard Input</h2>
+      <p>
+        Use for keyboard keys or shortcuts:
+        Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy.
+      </p>
+      <pre><code>&lt;p&gt;Press &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;C&lt;/kbd&gt; to copy.&lt;/p&gt;</code></pre>
+
+      <hr />
+
+      <h2>&lt;samp&gt; - Sample Output</h2>
+      <p>
+        Use for sample output from a program:
+        The program printed: <samp>Hello, World!</samp>
+      </p>
+      <pre><code>&lt;p&gt;The program printed: &lt;samp&gt;Hello, World!&lt;/samp&gt;&lt;/p&gt;</code></pre>
+
+      <hr />
+
+      <h2>&lt;var&gt; - Variable</h2>
+      <p>
+        Use for variables in math or programming:
+        The variable <var>x</var> equals 10.
+      </p>
+      <pre><code>&lt;p&gt;The variable &lt;var&gt;x&lt;/var&gt; equals 10.&lt;/p&gt;</code></pre>
+
+      <hr />
+
+      <h2>&lt;time&gt; - Date/Time</h2>
+      <p>
+        Use for dates and times:
+        The event is on <time datetime="2025-12-25">December 25, 2025</time>.
+      </p>
+      <pre><code>&lt;p&gt;The event is on &lt;time datetime="2025-12-25"&gt;December 25, 2025&lt;/time&gt;.&lt;/p&gt;</code></pre>
+
+      <p>With time:</p>
+      <p>
+        Meeting at <time datetime="2025-01-15T14:30">2:30 PM on January 15</time>.
+      </p>
+      <pre><code>&lt;p&gt;Meeting at &lt;time datetime="2025-01-15T14:30"&gt;2:30 PM on January 15&lt;/time&gt;.&lt;/p&gt;</code></pre>
+
+      <hr />
+
+      <h2>&lt;wbr&gt; - Word Break Opportunity</h2>
+      <p>
+        Suggests where a long word can break if needed:
+        supercalifragilistic<wbr />expialidocious
+      </p>
+      <pre><code>&lt;p&gt;supercalifragilistic&lt;wbr /&gt;expialidocious&lt;/p&gt;</code></pre>
+
+      <hr />
+
+      <h2>&lt;mark&gt; - Highlighted Text</h2>
+      <p>
+        Use to highlight important text:
+        Remember to use <mark>semantic HTML</mark> for better accessibility.
+      </p>
+      <pre><code>&lt;p&gt;Remember to use &lt;mark&gt;semantic HTML&lt;/mark&gt; for better accessibility.&lt;/p&gt;</code></pre>
+
+      <hr />
+
+      <h2>&lt;del&gt; and &lt;ins&gt; - Deleted and Inserted Text</h2>
+      <p>
+        Use for showing edits:
+        The price was <del>$100</del> <ins>$80</ins>.
+      </p>
+      <pre><code>&lt;p&gt;The price was &lt;del&gt;$100&lt;/del&gt; &lt;ins&gt;$80&lt;/ins&gt;.&lt;/p&gt;</code></pre>
+
+      <hr />
+
+      <h2>&lt;sub&gt; and &lt;sup&gt; - Subscript and Superscript</h2>
+      <p>
+        Subscript: H<sub>2</sub>O (water)
+      </p>
+      <p>
+        Superscript: E = mc<sup>2</sup> (Einstein's equation)
+      </p>
+      <pre><code>&lt;p&gt;H&lt;sub&gt;2&lt;/sub&gt;O&lt;/p&gt;
+&lt;p&gt;E = mc&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;</code></pre>
+
+      <hr />
+
+      <h2>Complete Example</h2>
+      <p>
+        In the book <cite>Web Development Guide</cite>, the term
+        <dfn>HTML</dfn> is defined. To save a file, press <kbd>Ctrl</kbd> +
+        <kbd>S</kbd>. The output will show: <samp>File saved successfully</samp>.
+        The variable <var>count</var> tracks items. The deadline is
+        <time datetime="2025-06-30">June 30, 2025</time>. Remember to use
+        <mark>semantic tags</mark> for better SEO.
+      </p>
+      <pre><code>&lt;p&gt;
+  In the book &lt;cite&gt;Web Development Guide&lt;/cite&gt;, the term
+  &lt;dfn&gt;HTML&lt;/dfn&gt; is defined. To save a file, press &lt;kbd&gt;Ctrl&lt;/kbd&gt; +
+  &lt;kbd&gt;S&lt;/kbd&gt;. The output will show: &lt;samp&gt;File saved successfully&lt;/samp&gt;.
+  The variable &lt;var&gt;count&lt;/var&gt; tracks items. The deadline is
+  &lt;time datetime="2025-06-30"&gt;June 30, 2025&lt;/time&gt;. Remember to use
+  &lt;mark&gt;semantic tags&lt;/mark&gt; for better SEO.
+&lt;/p&gt;</code></pre>
+    </main>
+
+    <footer>
+      <hr />
+      <p><a href="index.html">Back to Home</a></p>
+    </footer>
+  </body>
+</html>
+
