@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All HTML Input Types</title>
+  </head>
+  <body>
+    <header>
+      <h1>All HTML Input Types</h1>
+      <nav>
+        <a href="index.html">Home</a> |
+        <a href="html-text.html">Text</a> |
+        <a href="html-lists.html">Lists</a> |
+        <a href="html-tables.html">Tables</a> |
+        <a href="html-forms.html">Forms</a> |
+        <a href="html-inputs.html">Inputs</a> |
+        <a href="html-layout.html">Layout</a> |
+        <a href="html-media.html">Media</a> |
+        <a href="html-code.html">Code</a>
+      </nav>
+      <hr />
+    </header>
+
+    <main>
+      <section>
+        <h2>Text‑based inputs</h2>
+        <form>
+          <p>
+            <label for="in-text">type="text":</label>
+            <input id="in-text" type="text" placeholder="Text input" />
+          </p>
+          <p>
+            <label for="in-password">type="password":</label>
+            <input
+              id="in-password"
+              type="password"
+              placeholder="Password input"
+            />
+          </p>
+          <p>
+            <label for="in-email">type="email":</label>
+            <input
+              id="in-email"
+              type="email"
+              placeholder="name@example.com"
+            />
+          </p>
+          <p>
+            <label for="in-url">type="url":</label>
+            <input
+              id="in-url"
+              type="url"
+              placeholder="https://example.com"
+            />
+          </p>
+          <p>
+            <label for="in-tel">type="tel":</label>
+            <input id="in-tel" type="tel" placeholder="+1 123 456 7890" />
+          </p>
+        </form>
+      </section>
+
+      <section>
+        <h2>Number &amp; range</h2>
+        <form>
+          <p>
+            <label for="in-number">type="number":</label>
+            <input id="in-number" type="number" min="0" max="10" value="5" />
+          </p>
+          <p>
+            <label for="in-range">type="range":</label>
+            <input id="in-range" type="range" min="0" max="100" value="50" />
+          </p>
+        </form>
+      </section>
+
+      <section>
+        <h2>Date &amp; time</h2>
+        <form>
+          <p>
+            <label for="in-date">type="date":</label>
+            <input id="in-date" type="date" />
+          </p>
+          <p>
+            <label for="in-time">type="time":</label>
+            <input id="in-time" type="time" />
+          </p>
+          <p>
+            <label for="in-datetime">type="datetime-local":</label>
+            <input id="in-datetime" type="datetime-local" />
+          </p>
+          <p>
+            <label for="in-month">type="month":</label>
+            <input id="in-month" type="month" />
+          </p>
+          <p>
+            <label for="in-week">type="week":</label>
+            <input id="in-week" type="week" />
+          </p>
+        </form>
+      </section>
+
+      <section>
+        <h2>Choice inputs</h2>
+        <form>
+          <p>type="checkbox":</p>
+          <label>
+            <input type="checkbox" name="skill-html" />
+            HTML
+          </label>
+          <label>
+            <input type="checkbox" name="skill-css" />
+            CSS
+          </label>
+          <label>
+            <input type="checkbox" name="skill-js" />
+            JavaScript
+          </label>
+
+          <p>type="radio":</p>
+          <label>
+            <input type="radio" name="level" value="beginner" />
+            Beginner
+          </label>
+          <label>
+            <input type="radio" name="level" value="advanced" />
+            Advanced
+          </label>
+        </form>
+      </section>
+
+      <section>
+        <h2>File, color, and others</h2>
+        <form>
+          <p>
+            <label for="in-file">type="file":</label>
+            <input id="in-file" type="file" />
+          </p>
+          <p>
+            <label for="in-color">type="color":</label>
+            <input id="in-color" type="color" />
+          </p>
+          <p>
+            <label for="in-hidden">type="hidden":</label>
+            <input id="in-hidden" type="hidden" value="hidden-value" />
+            (not visible, but sends data)
+          </p>
+        </form>
+      </section>
+
+      <section>
+        <h2>Buttons</h2>
+        <form>
+          <p>
+            <input type="submit" value="Submit (input type=submit)" />
+          </p>
+          <p>
+            <input type="reset" value="Reset (input type=reset)" />
+          </p>
+          <p>
+            <input type="button" value="Just a button (input type=button)" />
+          </p>
+          <p>
+            <button type="button">Button element (button type="button")</button>
+          </p>
+        </form>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Code for a few inputs</h2>
+        <p>
+          Below is an example of how some of these inputs look in HTML. The
+          <code>&lt;code&gt;</code> tag is used inside a <code>&lt;pre&gt;</code>
+          block so the formatting is preserved.
+        </p>
+        <pre>
+<code>&lt;form&gt;
+  &lt;label for="in-text"&gt;type="text":&lt;/label&gt;
+  &lt;input id="in-text" type="text" placeholder="Text input" /&gt;
+
+  &lt;label for="in-email"&gt;type="email":&lt;/label&gt;
+  &lt;input id="in-email" type="email" placeholder="name@example.com" /&gt;
+
+  &lt;label for="in-number"&gt;type="number":&lt;/label&gt;
+  &lt;input id="in-number" type="number" min="0" max="10" value="5" /&gt;
+
+  &lt;input type="checkbox" name="skill-html" /&gt; HTML
+  &lt;input type="radio" name="level" value="beginner" /&gt; Beginner
+
+  &lt;input type="submit" value="Submit" /&gt;
+&lt;/form&gt;
+</code>
+        </pre>
+      </section>
+    </main>
+
+    <footer>
+      <hr />
+      <p><a href="index.html">Back to Home</a></p>
+    </footer>
+  </body>
+</html>
+
+
