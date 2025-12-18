@@ -4,8 +4,147 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Forms</title>
-  </head>
+      <style>
+      .top-navbar {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 1rem 2rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      .top-navbar nav {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+      }
+      .top-navbar a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        transition: background-color 0.3s ease;
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .top-navbar a:hover {
+        background: rgba(255, 255, 255, 0.2);
+        text-decoration: none;
+      }
+      .top-navbar a.active {
+        background: rgba(255, 255, 255, 0.3);
+      }
+          .unified-layout {
+        display: grid;
+        grid-template-columns: 260px minmax(0, 1fr);
+        min-height: calc(100vh - 80px);
+      }
+      
+      .unified-sidebar {
+        background-color: #020617;
+        color: #e5e7eb;
+        padding: 1.5rem 1rem;
+        position: sticky;
+        top: 0;
+        align-self: start;
+        min-height: calc(100vh - 80px);
+      }
+      
+      .unified-sidebar h1 {
+        font-size: 1.1rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        color: #e5e7eb;
+      }
+      
+      .unified-sidebar nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .unified-sidebar nav li {
+        margin-bottom: 0.35rem;
+      }
+      
+      .unified-sidebar nav a {
+        color: #e5e7eb;
+        font-size: 0.9rem;
+        display: block;
+        padding: 0.25rem 0;
+      }
+      
+      .unified-sidebar nav a:hover {
+        color: #bfdbfe;
+        text-decoration: none;
+      }
+      
+      .unified-content {
+        padding: 2rem 2.5rem;
+        background-color: #f9fafb;
+      }
+      
+      .unified-content header {
+        margin-bottom: 1.5rem;
+      }
+      
+      .unified-content h1 {
+        color: #0f172a;
+        margin-top: 0;
+      }
+      
+      .unified-content h2 {
+        color: #0f172a;
+      }
+    </style>
+</head>
   <body>
+    <div class="top-navbar">
+      <nav aria-label="Web Development Guides">
+        <a href="https://faizan1699.github.io/html-plan/" class="active">📄 HTML Guide</a>
+        <a href="https://faizan1699.github.io/plain-css-guide/">🎨 CSS Guide</a>
+        <a href="https://faizan1699.github.io/plain-js-complete-guide/">⚡ JavaScript Guide</a>
+      </nav>
+        <div class="unified-layout">
+      <aside class="unified-sidebar">
+        <h1>HTML Guide</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="html-text.html">Text Elements</a></li>
+            <li><a href="html-lists.html">Lists</a></li>
+            <li><a href="html-tables.html">Tables</a></li>
+            <li><a href="html-forms.html" style="color: #bfdbfe; font-weight: 600;">Forms</a></li>
+            <li><a href="html-inputs.html">Inputs</a></li>
+            <li><a href="html-layout.html">Layout</a></li>
+            <li><a href="html-media.html">Media</a></li>
+            <li><a href="html-links.html">Links</a></li>
+            <li><a href="html-entities.html">Entities</a></li>
+            <li><a href="html-meta-seo.html">Meta & SEO</a></li>
+            <li><a href="html-svg-canvas.html">SVG & Canvas</a></li>
+            <li><a href="html-semantic-inline.html">Semantic Inline</a></li>
+            <li><a href="html-head-tags.html">Head Tags</a></li>
+            <li><a href="html-embedded.html">Embedded</a></li>
+            <li><a href="html-comments-data.html">Comments & Data</a></li>
+            <li><a href="html-accessibility.html">Accessibility</a></li>
+            <li><a href="html-validation.html">Validation</a></li>
+            <li><a href="html-other-advanced.html">Advanced</a></li>
+            <li><a href="html-history.html">History</a></li>
+            <li><a href="html-versions.html">Versions</a></li>
+            <li><a href="html-web-history.html">Web History</a></li>
+            <li><a href="html-education.html">Education</a></li>
+            <li><a href="html-advanced.html">Advanced Features</a></li>
+            <li><a href="html-code.html">Code Examples</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <main class="unified-content">
+</div>
     <header>
       <h1>HTML Forms</h1>
       <nav>
@@ -76,6 +215,8 @@
       <hr />
       <p><a href="index.html">Back to Home</a></p>
     </footer>
+        </main>
+    </div>
   </body>
 </html>
 
