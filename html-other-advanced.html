@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<!--
+  HTML5 DOCTYPE declaration - Required for valid HTML5 documents.
+  This is the simplest DOCTYPE and tells browsers to use standards mode.
+-->
+<html lang="en">
+  <!--
+    lang="en" specifies the page language (English).
+    Helps screen readers and search engines understand the content.
+  -->
+  <head>
+    <!--
+      <head> contains metadata about the page.
+      This information isn't visible but is important for browsers and SEO.
+    -->
+    <meta charset="UTF-8" />
+    <!--
+      UTF-8 encoding supports all characters including emojis and international text.
+      Always include this FIRST in the head section.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+      Viewport meta tag makes pages responsive on mobile devices.
+      Without this, mobile browsers may show desktop layout zoomed out.
+    -->
+    <meta name="description" content="Other advanced HTML tags including dialog, menu, template, ruby annotations, and bidirectional text." />
+    <!--
+      Description meta tag appears in search engine results.
+      Keep it descriptive and under 160 characters.
+    -->
+    <title>Other Advanced HTML Tags</title>
+  </head>
+  <body>
+    <!--
+      <body> contains all visible content on the page.
+      Everything users see goes inside the body tag.
+    -->
+    <header>
+      <!--
+        <header> is a semantic HTML5 element for the top section.
+        Typically contains site title, logo, and main navigation.
+        Using semantic tags improves SEO and accessibility.
+      -->
+      <h1>Other Advanced HTML Tags</h1>
+      <!--
+        <h1> is the main page heading - only ONE per page.
+        Most important heading for SEO and screen readers.
+      -->
+      <nav aria-label="Main navigation">
+        <!--
+          <nav> is specifically for navigation links.
+          aria-label helps screen readers identify navigation purpose.
+        -->
+        <a href="index.html">Home</a> |
+        <a href="html-other-advanced.html">Advanced Tags</a>
+      </nav>
+      <hr />
+      <!--
+        <hr> creates a horizontal rule to visually separate sections.
+        Self-closing tag in HTML5.
+      -->
+    </header>
+
+    <main>
+      <!--
+        <main> contains the main content of the page.
+        There should be only ONE <main> per page.
+        Helps screen readers skip navigation and go to main content.
+      -->
+      <h2>Additional Advanced HTML Tags</h2>
+      <p>
+        These are some less commonly used but useful HTML tags for specific
+        purposes.
+      </p>
+
+      <hr />
+
+      <h2>&lt;dialog&gt; - Modal Dialog</h2>
+      <!--
+        <dialog> creates a modal dialog box.
+        Requires JavaScript to show/hide (open/close attributes).
+        Good for popups, confirmations, etc.
+      -->
+      <p>Click the button to open a dialog:</p>
+      <button onclick="document.getElementById('myDialog').showModal()">
+        Open Dialog
+      </button>
+      <dialog id="myDialog">
+        <p>This is a dialog box!</p>
+        <button onclick="document.getElementById('myDialog').close()">
+          Close
+        </button>
+      </dialog>
+
+      <pre><code>&lt;dialog id="myDialog"&gt;
+  &lt;p&gt;This is a dialog box!&lt;/p&gt;
+  &lt;button onclick="document.getElementById('myDialog').close()"&gt;
+    Close
+  &lt;/button&gt;
+&lt;/dialog&gt;
+
+&lt;!-- JavaScript to open --&gt;
+&lt;button onclick="document.getElementById('myDialog').showModal()"&gt;
+  Open Dialog
+&lt;/button&gt;</code></pre>
+
+      <hr />
+
+      <h2>&lt;menu&gt; - Menu Element</h2>
+      <!--
+        <menu> represents a list of commands or options.
+        Can be used for context menus or toolbars.
+        Note: Not widely supported, consider using <nav> with <ul> instead.
+      -->
+      <menu>
+        <li><button onclick="alert('Cut')">Cut</button></li>
+        <li><button onclick="alert('Copy')">Copy</button></li>
+        <li><button onclick="alert('Paste')">Paste</button></li>
+      </menu>
+
+      <pre><code>&lt;menu&gt;
+  &lt;li&gt;&lt;button&gt;Cut&lt;/button&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;button&gt;Copy&lt;/button&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;button&gt;Paste&lt;/button&gt;&lt;/li&gt;
+&lt;/menu&gt;</code></pre>
+
+      <hr />
+
+      <h2>&lt;template&gt; - HTML Template</h2>
+      <!--
+        <template> holds HTML content that won't be rendered until cloned with JavaScript.
+        Useful for creating reusable content structures.
+        Content inside template is hidden until activated.
+      -->
+      <template id="myTemplate">
+        <div>
+          <h3>Template Content</h3>
+          <p>This content is hidden until cloned with JavaScript.</p>
+        </div>
+      </template>
+      <p>
+        <em>Note: Template content is hidden. Use JavaScript to clone and display
+        it.</em>
+      </p>
+
+      <pre><code>&lt;template id="myTemplate"&gt;
+  &lt;div&gt;
+    &lt;h3&gt;Template Content&lt;/h3&gt;
+    &lt;p&gt;This content is hidden until cloned.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;!-- JavaScript to use template --&gt;
+&lt;script&gt;
+  var template = document.getElementById('myTemplate');
+  var clone = template.content.cloneNode(true);
+  document.body.appendChild(clone);
+&lt;/script&gt;</code></pre>
+
+      <hr />
+
+      <h2>&lt;ruby&gt;, &lt;rt&gt;, &lt;rp&gt; - Ruby Annotations</h2>
+      <!--
+        Ruby annotations are used for pronunciation guides, especially in Asian languages.
+        <ruby> wraps the base text and annotation.
+        <rt> contains the annotation (pronunciation).
+        <rp> provides fallback parentheses for browsers that don't support ruby.
+      -->
+      <p>
+        Ruby annotations for pronunciation (common in Japanese, Chinese):
+      </p>
+      <ruby>
+        漢 <rp>(</rp><rt>kan</rt><rp>)</rp>
+        字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+      </ruby>
+
+      <pre><code>&lt;ruby&gt;
+  漢 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;kan&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
+  字 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;ji&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
+&lt;/ruby&gt;</code></pre>
+
+      <hr />
+
+      <h2>&lt;bdi&gt; - Bidirectional Isolate</h2>
+      <!--
+        <bdi> isolates text from surrounding bidirectional text.
+        Useful when mixing left-to-right and right-to-left languages.
+        Prevents text direction from affecting surrounding content.
+      -->
+      <p>Example with mixed languages:</p>
+      <p>
+        User <bdi>محمد</bdi> wrote: "Hello, world!"
+      </p>
+
+      <pre><code>&lt;p&gt;
+  User &lt;bdi&gt;محمد&lt;/bdi&gt; wrote: "Hello, world!"
+&lt;/p&gt;</code></pre>
+
+      <hr />
+
+      <h2>&lt;bdo&gt; - Bidirectional Override</h2>
+      <!--
+        <bdo> overrides the text direction.
+        dir="rtl" makes text right-to-left, dir="ltr" makes it left-to-right.
+        Useful for forcing text direction regardless of language.
+      -->
+      <p>Right-to-left text:</p>
+      <p><bdo dir="rtl">This text reads from right to left</bdo></p>
+
+      <p>Left-to-right text:</p>
+      <p><bdo dir="ltr">This text reads from left to right</bdo></p>
+
+      <pre><code>&lt;!-- Right-to-left --&gt;
+&lt;bdo dir="rtl"&gt;This text reads from right to left&lt;/bdo&gt;
+
+&lt;!-- Left-to-right --&gt;
+&lt;bdo dir="ltr"&gt;This text reads from left to right&lt;/bdo&gt;</code></pre>
+
+      <hr />
+
+      <h2>&lt;slot&gt; - Web Component Slot</h2>
+      <!--
+        <slot> is used in Web Components (Custom Elements).
+        Allows you to insert content into a template.
+        Requires JavaScript and Web Components API.
+      -->
+      <p>
+        <em>Note: &lt;slot&gt; is used with Web Components and requires JavaScript.
+        Example shown in code only.</em>
+      </p>
+
+      <pre><code>&lt;!-- In a Web Component template --&gt;
+&lt;template id="my-component"&gt;
+  &lt;div&gt;
+    &lt;h2&gt;Title&lt;/h2&gt;
+    &lt;slot name="content"&gt;Default content&lt;/slot&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;!-- Usage --&gt;
+&lt;my-component&gt;
+  &lt;span slot="content"&gt;Custom content here&lt;/span&gt;
+&lt;/my-component&gt;</code></pre>
+
+      <hr />
+
+      <h2>Summary Table</h2>
+      <table border="1">
+        <caption>Advanced HTML Tags Overview</caption>
+        <thead>
+          <tr>
+            <th scope="col">Tag</th>
+            <th scope="col">Purpose</th>
+            <th scope="col">Browser Support</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>&lt;dialog&gt;</td>
+            <td>Modal dialog boxes</td>
+            <td>Modern browsers</td>
+          </tr>
+          <tr>
+            <td>&lt;menu&gt;</td>
+            <td>List of commands</td>
+            <td>Limited</td>
+          </tr>
+          <tr>
+            <td>&lt;template&gt;</td>
+            <td>Reusable HTML templates</td>
+            <td>Modern browsers</td>
+          </tr>
+          <tr>
+            <td>&lt;ruby&gt;, &lt;rt&gt;, &lt;rp&gt;</td>
+            <td>Pronunciation annotations</td>
+            <td>Modern browsers</td>
+          </tr>
+          <tr>
+            <td>&lt;bdi&gt;</td>
+            <td>Bidirectional text isolate</td>
+            <td>Modern browsers</td>
+          </tr>
+          <tr>
+            <td>&lt;bdo&gt;</td>
+            <td>Bidirectional text override</td>
+            <td>All browsers</td>
+          </tr>
+          <tr>
+            <td>&lt;slot&gt;</td>
+            <td>Web Components slots</td>
+            <td>Modern browsers</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <pre><code>&lt;!-- Complete example using multiple advanced tags --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;title&gt;Advanced Tags Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;dialog id="myDialog"&gt;
+    &lt;p&gt;Dialog content&lt;/p&gt;
+    &lt;button onclick="document.getElementById('myDialog').close()"&gt;Close&lt;/button&gt;
+  &lt;/dialog&gt;
+
+  &lt;template id="myTemplate"&gt;
+    &lt;div&gt;Template content&lt;/div&gt;
+  &lt;/template&gt;
+
+  &lt;ruby&gt;
+    漢 &lt;rt&gt;kan&lt;/rt&gt;
+  &lt;/ruby&gt;
+
+  &lt;bdo dir="rtl"&gt;Right to left text&lt;/bdo&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </main>
+
+    <footer>
+      <!--
+        <footer> is a semantic element for the bottom section.
+        Typically contains copyright, links, contact info.
+      -->
+      <hr />
+      <p><a href="index.html">Back to Home</a></p>
+    </footer>
+  </body>
+</html>
+

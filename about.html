@@ -1,43 +1,130 @@
 <!DOCTYPE html>
+<!--
+  HTML5 DOCTYPE declaration - Required for valid HTML5 documents.
+  This tells browsers to render in standards mode.
+-->
 <html lang="en">
+  <!--
+    lang="en" specifies the page language (English).
+    Helps screen readers pronounce words correctly and helps search engines.
+  -->
   <head>
+    <!--
+      <head> contains metadata - information about the page that isn't visible.
+      Includes title, character encoding, viewport settings, etc.
+    -->
     <meta charset="UTF-8" />
+    <!--
+      UTF-8 encoding supports all characters including emojis and international text.
+      Always include this FIRST in the head section.
+    -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+      Viewport meta tag makes pages responsive on mobile devices.
+      Without this, mobile browsers may zoom out to show desktop layout.
+    -->
+    <meta name="description" content="Learn about this HTML educational website and what you can practice with Git and GitHub." />
+    <!--
+      Description meta tag appears in search engine results.
+      Keep it descriptive and under 160 characters.
+    -->
     <title>My GitHub Site - About</title>
+    <!--
+      <title> appears in the browser tab and is used by search engines.
+      Keep it descriptive and under 60 characters.
+    -->
   </head>
   <body>
+    <!--
+      <body> contains all visible content on the page.
+      Everything users see goes inside the body tag.
+    -->
     <header>
+      <!--
+        <header> is a semantic HTML5 element for the top section.
+        Typically contains site title, logo, and main navigation.
+        Using semantic tags improves SEO and accessibility.
+      -->
       <h1>My GitHub Site</h1>
-      <nav>
+      <!--
+        <h1> is the main page heading - only ONE per page.
+        Most important heading for SEO and screen readers.
+      -->
+      <nav aria-label="Main navigation">
+        <!--
+          <nav> is specifically for navigation links.
+          aria-label helps screen readers identify the navigation purpose.
+        -->
         <a href="index.html">Home</a> |
         <a href="projects.html">Projects</a> |
         <a href="about.html">About</a> |
         <a href="contact.html">Contact</a>
       </nav>
       <hr />
+      <!--
+        <hr> creates a horizontal rule to visually separate sections.
+        Self-closing tag in HTML5.
+      -->
     </header>
 
     <main>
+      <!--
+        <main> contains the main content of the page.
+        There should be only ONE <main> per page.
+        Helps screen readers skip navigation and go to main content.
+      -->
       <h2>About This Site</h2>
+      <!--
+        <h2> is a section heading - use it for major sections.
+        Follows the h1 heading in the hierarchy.
+      -->
       <p>
+        <!--
+          <p> creates a paragraph - a block of text.
+          Browsers add spacing before and after paragraphs automatically.
+        -->
         This website is created only with HTML to help you learn how static
         websites work and how to host them on GitHub.
       </p>
       <h3>What you can practice</h3>
+      <!--
+        <h3> is a subsection heading - use it for subsections within h2 sections.
+        Maintains proper heading hierarchy.
+      -->
+      <!--
+        <ul> creates an unordered (bullet) list.
+        <li> creates each list item. Must be inside <ul> or <ol>.
+      -->
       <ul>
         <li>Creating and editing HTML files.</li>
         <li>Using Git to track changes.</li>
         <li>Pushing code to GitHub.</li>
         <li>Publishing a site with GitHub Pages.</li>
       </ul>
+
+      <pre><code>&lt;!-- Example of proper HTML structure --&gt;
+&lt;main&gt;
+  &lt;h2&gt;Section Title&lt;/h2&gt;
+  &lt;p&gt;Paragraph content here.&lt;/p&gt;
+  &lt;h3&gt;Subsection Title&lt;/h3&gt;
+  &lt;ul&gt;
+    &lt;li&gt;First item&lt;/li&gt;
+    &lt;li&gt;Second item&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/main&gt;</code></pre>
     </main>
 
     <footer>
+      <!--
+        <footer> is a semantic element for the bottom section.
+        Typically contains copyright, links, contact info.
+      -->
       <hr />
+      <!--
+        &copy; is an HTML entity for the copyright symbol ©.
+        <span> is used here to wrap the year for styling purposes.
+      -->
       <p>&copy; <span>2025</span> My GitHub Site</p>
     </footer>
   </body>
 </html>
-
-
-

@@ -1,24 +1,96 @@
 <!DOCTYPE html>
+<!--
+  HTML5 DOCTYPE declaration - tells the browser this is an HTML5 document.
+  This is the shortest and simplest DOCTYPE, unlike older HTML versions.
+-->
 <html lang="en">
+  <!--
+    <html> is the root element that wraps all content.
+    lang="en" tells browsers and screen readers the page language (English).
+    This helps with accessibility and SEO.
+  -->
   <head>
+    <!--
+      <head> contains metadata (information about the page) that isn't visible.
+      It includes title, meta tags, links to stylesheets, etc.
+    -->
+    
+    <!--
+      Character encoding: UTF-8 supports all characters including emojis and international text.
+      Always include this FIRST in the head section.
+    -->
     <meta charset="UTF-8" />
+    
+    <!--
+      Viewport meta tag: Makes the page responsive on mobile devices.
+      width=device-width: Use the device's screen width
+      initial-scale=1.0: Start at 100% zoom (no initial zoom)
+    -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!--
+      Description meta tag: Shown in search engine results.
+      Keep it under 160 characters for best display.
+    -->
+    <meta name="description" content="Learn HTML with comprehensive examples, tutorials, and code samples. Perfect for beginners learning web development." />
+    
+    <!--
+      <title> appears in the browser tab and is used by search engines.
+      Keep it descriptive and under 60 characters.
+    -->
     <title>My GitHub Site - Home</title>
   </head>
+  
   <body>
+    <!--
+      <body> contains all visible content on the page.
+      Everything users see goes inside the body tag.
+    -->
+    
+    <!--
+      <header> is a semantic HTML5 element for the top section of a page.
+      It typically contains the site title, logo, and main navigation.
+      Using semantic tags helps screen readers and improves SEO.
+    -->
     <header>
+      <!--
+        <h1> is the main heading - there should be only ONE per page.
+        It's the most important heading and helps with SEO and accessibility.
+      -->
       <h1>My GitHub Site</h1>
-      <nav>
+      
+      <!--
+        <nav> is a semantic element specifically for navigation links.
+        Screen readers can identify this as the main navigation area.
+      -->
+      <nav aria-label="Main navigation">
+        <!--
+          <a> tags create hyperlinks. href specifies the destination.
+          Using relative paths (index.html) links to files in the same folder.
+        -->
         <a href="index.html">Home</a> |
         <a href="projects.html">Projects</a> |
         <a href="about.html">About</a> |
         <a href="contact.html">Contact</a>
       </nav>
+      
+      <!--
+        <hr> creates a horizontal rule (line) to separate content sections.
+        It's a self-closing tag (no closing tag needed in HTML5).
+      -->
       <hr />
     </header>
 
+    <!--
+      <main> is a semantic HTML5 element for the main content of the page.
+      There should be only ONE <main> per page. It helps screen readers skip to main content.
+    -->
     <main>
       <h2>Welcome</h2>
+      <!--
+        <p> creates a paragraph. Browsers add spacing before and after paragraphs.
+        This is a block-level element (takes full width).
+      -->
       <p>
         This is a simple multi-page site built only with HTML for learning
         purposes. You can use it to practice working with Git and GitHub.
@@ -32,6 +104,11 @@
 
       <h2>HTML Topic Pages</h2>
       <p>Click a topic below to see focused examples of important HTML parts:</p>
+      
+      <!--
+        <ul> creates an unordered (bullet) list.
+        <li> creates each list item. Must be inside <ul> or <ol>.
+      -->
       <ul>
         <li><a href="html-text.html">Text elements</a></li>
         <li><a href="html-lists.html">Lists</a></li>
@@ -46,6 +123,17 @@
         <li><a href="html-history.html">History of HTML</a></li>
         <li><a href="html-versions.html">HTML versions &amp; changes</a></li>
         <li><a href="html-web-history.html">History of web development (EN/UR)</a></li>
+        <li><a href="html-links.html">Links &amp; anchors</a></li>
+        <li><a href="html-entities.html">HTML entities &amp; special characters</a></li>
+        <li><a href="html-meta-seo.html">Meta tags &amp; SEO</a></li>
+        <li><a href="html-svg-canvas.html">SVG &amp; Canvas</a></li>
+        <li><a href="html-semantic-inline.html">Semantic inline tags</a></li>
+        <li><a href="html-head-tags.html">Head section tags</a></li>
+        <li><a href="html-embedded.html">Embedded content</a></li>
+        <li><a href="html-comments-data.html">Comments &amp; data attributes</a></li>
+        <li><a href="html-accessibility.html">Accessibility</a></li>
+        <li><a href="html-validation.html">Validation &amp; best practices</a></li>
+        <li><a href="html-other-advanced.html">Other advanced tags</a></li>
       </ul>
 
       <hr />
@@ -53,22 +141,42 @@
       <h2>HTML Tag Examples</h2>
 
       <!-- DIV example -->
+      <!--
+        <div> is a generic container with no semantic meaning.
+        Use it when no other semantic element fits. Prefer semantic tags when possible.
+      -->
       <h3>&lt;div&gt; container</h3>
       <div>
+        <!--
+          <strong> makes text bold AND indicates importance semantically.
+          For just visual bold, use CSS. <strong> tells screen readers this is important.
+        -->
         This is a <strong>div</strong>. It is a generic block container you can
         use to group other elements.
       </div>
+      
+      <pre><code>&lt;div&gt;
+  This is a generic container for grouping elements.
+&lt;/div&gt;</code></pre>
 
       <!-- NAV + UL/LI example -->
       <h3>&lt;nav&gt;, &lt;ul&gt;, &lt;li&gt;</h3>
       <p>Below is another simple navigation menu made with a list:</p>
-      <nav>
+      <nav aria-label="Secondary navigation">
         <ul>
           <li>Home</li>
           <li>Lessons</li>
           <li>Projects</li>
         </ul>
       </nav>
+      
+      <pre><code>&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Home&lt;/li&gt;
+    &lt;li&gt;Lessons&lt;/li&gt;
+    &lt;li&gt;Projects&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
 
       <!-- UL / OL / LI example -->
       <h3>Lists: &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</h3>
@@ -78,27 +186,65 @@
         <li>Practice Git commands</li>
         <li>Upload code to GitHub</li>
       </ul>
+      
+      <pre><code>&lt;ul&gt;
+  &lt;li&gt;First item&lt;/li&gt;
+  &lt;li&gt;Second item&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
 
       <p>Ordered list (numbers):</p>
+      <!--
+        <ol> creates an ordered (numbered) list.
+        Use when order matters (steps, rankings, etc.).
+      -->
       <ol>
         <li>Install Git</li>
         <li>Create a repository</li>
         <li>Commit and push changes</li>
       </ol>
+      
+      <pre><code>&lt;ol&gt;
+  &lt;li&gt;First step&lt;/li&gt;
+  &lt;li&gt;Second step&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
 
       <!-- TABLE example -->
       <h3>&lt;table&gt; example</h3>
       <p>A simple table comparing some HTML tags:</p>
+      <!--
+        <table> displays data in rows and columns.
+        border="1" is deprecated but used here for visibility (should use CSS in production).
+        <thead> contains header rows, <tbody> contains data rows.
+        <tr> = table row, <th> = header cell, <td> = data cell.
+      -->
       <table border="1">
+        <caption>HTML Tags Comparison</caption>
+        <!--
+          <caption> provides a title for the table.
+          It's important for accessibility and helps users understand the table.
+        -->
         <thead>
+          <!--
+            <thead> groups header rows. Helps screen readers understand table structure.
+          -->
           <tr>
-            <th>Tag</th>
-            <th>Type</th>
-            <th>Short description</th>
+            <!--
+              <th> creates header cells (bold by default).
+              Use scope="col" or scope="row" for better accessibility.
+            -->
+            <th scope="col">Tag</th>
+            <th scope="col">Type</th>
+            <th scope="col">Short description</th>
           </tr>
         </thead>
         <tbody>
+          <!--
+            <tbody> groups data rows. Separates content from headers/footers.
+          -->
           <tr>
+            <!--
+              <td> creates data cells (normal table cells).
+            -->
             <td>&lt;div&gt;</td>
             <td>Block</td>
             <td>Generic container for content.</td>
@@ -120,6 +266,22 @@
           </tr>
         </tbody>
       </table>
+      
+      <pre><code>&lt;table border="1"&gt;
+  &lt;caption&gt;Table Title&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Header 1&lt;/th&gt;
+      &lt;th scope="col"&gt;Header 2&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Data 1&lt;/td&gt;
+      &lt;td&gt;Data 2&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
 
       <hr />
 
@@ -127,17 +289,40 @@
 
       <!-- layout section / article / aside -->
       <h3>Layout: &lt;section&gt;, &lt;article&gt;, &lt;aside&gt;, &lt;hr&gt;</h3>
+      <!--
+        <section> groups related content together.
+        Use it to organize your page into logical sections.
+      -->
       <section>
         <h4>Section title</h4>
+        <!--
+          <article> represents independent, self-contained content.
+          Examples: blog post, news article, forum post.
+        -->
         <article>
           This is an <strong>article</strong> inside a <strong>section</strong>.
           It could be a blog post or a single piece of content.
         </article>
+        <!--
+          <aside> contains content tangentially related to main content.
+          Examples: sidebars, call-out boxes, related links.
+        -->
         <aside>
           This is an <strong>aside</strong>. It can contain side notes or extra
           information.
         </aside>
       </section>
+      
+      <pre><code>&lt;section&gt;
+  &lt;h2&gt;Section Title&lt;/h2&gt;
+  &lt;article&gt;
+    &lt;p&gt;Article content here&lt;/p&gt;
+  &lt;/article&gt;
+  &lt;aside&gt;
+    &lt;p&gt;Side note or related info&lt;/p&gt;
+  &lt;/aside&gt;
+&lt;/section&gt;</code></pre>
+      
       <p>
         The horizontal line below is an <strong>&lt;hr&gt;</strong> tag, often
         used to separate content:
@@ -147,34 +332,91 @@
       <!-- span and br -->
       <h3>&lt;span&gt; and &lt;br&gt;</h3>
       <p>
+        <!--
+          <span> is a generic inline container (like div, but inline).
+          Use it to style or target specific text within a paragraph.
+        -->
         <span>This is a span inside a paragraph, used for inline content.</span>
+        <!--
+          <br> creates a line break. Use sparingly - prefer CSS for spacing.
+          Self-closing tag in HTML5.
+        -->
         <br />
         This text is on the next line because of a <strong>&lt;br&gt;</strong>
         line break.
       </p>
+      
+      <pre><code>&lt;p&gt;
+  This is a &lt;span&gt;span element&lt;/span&gt; inside a paragraph.
+  &lt;br /&gt;
+  This is on a new line.
+&lt;/p&gt;</code></pre>
 
       <!-- basic form and button -->
       <h3>Form: &lt;form&gt;, &lt;label&gt;, &lt;input&gt;, &lt;textarea&gt;, &lt;button&gt;</h3>
       <p>Simple contact form (for practice only, it does not send data):</p>
+      <!--
+        <form> groups form controls together.
+        In production, add action (where to send) and method (GET/POST).
+      -->
       <form>
+        <!--
+          <label> associates text with an input for accessibility.
+          The 'for' attribute must match the input's 'id'.
+          Clicking the label focuses the input - important for usability!
+        -->
         <label for="name">Name:</label>
+        <!--
+          <input> creates various form controls based on the 'type' attribute.
+          'id' links to label, 'name' is sent with form data.
+        -->
         <input id="name" type="text" name="name" />
         <br />
         <label for="message">Message:</label>
         <br />
+        <!--
+          <textarea> creates a multi-line text input.
+          'rows' and 'cols' set initial size (can be resized by user).
+        -->
         <textarea id="message" name="message" rows="3" cols="30"></textarea>
         <br />
+        <!--
+          <button> creates a clickable button.
+          'type' can be: submit (sends form), reset (clears form), or button (does nothing by default).
+        -->
         <button type="submit">Send</button>
       </form>
+      
+      <pre><code>&lt;form&gt;
+  &lt;label for="name"&gt;Name:&lt;/label&gt;
+  &lt;input id="name" type="text" name="name" /&gt;
+  &lt;br /&gt;
+  &lt;label for="message"&gt;Message:&lt;/label&gt;
+  &lt;textarea id="message" name="message" rows="3" cols="30"&gt;&lt;/textarea&gt;
+  &lt;br /&gt;
+  &lt;button type="submit"&gt;Send&lt;/button&gt;
+&lt;/form&gt;</code></pre>
 
       <!-- select / option -->
       <h3>&lt;select&gt; and &lt;option&gt;</h3>
       <p>Choose a topic you want to learn:</p>
-      <select>
-        <option>HTML</option>
-        <option>CSS</option>
-        <option>JavaScript</option>
+      <!--
+        <select> creates a dropdown menu.
+        <option> creates each choice in the dropdown.
+        Always include a label for accessibility!
+      -->
+      <label for="topic-select">Topic:</label>
+      <select id="topic-select" name="topic">
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="javascript">JavaScript</option>
       </select>
+      
+      <pre><code>&lt;label for="topic"&gt;Choose topic:&lt;/label&gt;
+&lt;select id="topic" name="topic"&gt;
+  &lt;option value="html"&gt;HTML&lt;/option&gt;
+  &lt;option value="css"&gt;CSS&lt;/option&gt;
+&lt;/select&gt;</code></pre>
 
       <!-- img and a -->
       <h3>&lt;img&gt; and &lt;a&gt;</h3>
@@ -183,24 +425,52 @@
         GitHub:
       </p>
       <p>
-        <a href="https://github.com" target="_blank">Visit GitHub</a>
+        <!--
+          <a> creates hyperlinks. href is the destination URL.
+          target="_blank" opens in new tab (add rel="noopener" for security).
+        -->
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">Visit GitHub</a>
       </p>
+      
+      <pre><code>&lt;a href="https://example.com" target="_blank" rel="noopener noreferrer"&gt;
+  Link Text
+&lt;/a&gt;</code></pre>
+      
       <p>
         This is an <strong>&lt;img&gt;</strong> example (replace the source with
         your own image if you want):
       </p>
+      <!--
+        <img> displays images. 'src' is the image URL/path.
+        'alt' is REQUIRED for accessibility - describes the image for screen readers.
+        If image is decorative, use alt="" (empty string).
+      -->
       <img
         src="https://via.placeholder.com/150"
-        alt="Placeholder example image"
+        alt="Placeholder example image showing a 150x150 pixel gray box"
+        width="150"
+        height="150"
       />
+      
+      <pre><code>&lt;img
+  src="image.jpg"
+  alt="Description of the image"
+  width="150"
+  height="150"
+/&gt;</code></pre>
     </main>
 
+    <!--
+      <footer> is a semantic element for the bottom section of a page.
+      Typically contains copyright, links, contact info.
+    -->
     <footer>
       <hr />
+      <!--
+        &copy; is an HTML entity for the copyright symbol ©.
+        <span> is used here to wrap the year for styling purposes.
+      -->
       <p>&copy; <span>2025</span> My GitHub Site</p>
     </footer>
   </body>
 </html>
-
-
-

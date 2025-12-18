@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<!--
+  HTML5 DOCTYPE - Required for valid HTML5 documents.
+  This tells browsers to render in standards mode.
+-->
+<html lang="en">
+<!--
+    lang attribute helps screen readers pronounce words correctly
+    and helps search engines understand the content language.
+  -->
+
+<head>
+    <!--
+      <head> contains metadata - information about the page that isn't visible.
+      This includes title, character encoding, viewport settings, etc.
+    -->
+    <meta charset="UTF-8" />
+    <!--
+      UTF-8 encoding supports all characters including emojis and international text.
+      Always include this FIRST in the head section.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+      Viewport meta tag makes pages responsive on mobile devices.
+      Without this, mobile browsers may zoom out to show desktop layout.
+    -->
+    <meta name="description"
+        content="HTML validation, best practices, and common mistakes to avoid when writing HTML code." />
+    <!--
+      Description meta tag appears in search engine results.
+      Keep it under 160 characters for best display.
+    -->
+    <title>HTML Validation &amp; Best Practices</title>
+</head>
+
+<body>
+    <!--
+      <body> contains all visible content on the page.
+      Everything users see goes inside the body tag.
+    -->
+    <header>
+        <!--
+        <header> is a semantic HTML5 element for the top section.
+        It typically contains site title, logo, and main navigation.
+        Using semantic tags improves SEO and accessibility.
+      -->
+        <h1>HTML Validation &amp; Best Practices</h1>
+        <!--
+        <h1> is the main page heading. There should be only ONE per page.
+        It's the most important heading for SEO and screen readers.
+      -->
+        <nav aria-label="Main navigation">
+            <!--
+          <nav> is specifically for navigation links.
+          aria-label helps screen readers identify the navigation purpose.
+        -->
+            <a href="index.html">Home</a> |
+            <a href="html-validation.html">Validation</a>
+        </nav>
+        <hr />
+        <!--
+        <hr> creates a horizontal rule to visually separate sections.
+        Self-closing tag in HTML5.
+      -->
+    </header>
+
+    <main>
+        <!--
+        <main> contains the main content of the page.
+        There should be only ONE <main> per page.
+        Helps screen readers skip navigation and go to main content.
+      -->
+        <h2>What is HTML Validation?</h2>
+        <p>
+            HTML validation checks your code against HTML standards to find errors
+            and potential problems. Valid HTML works better across browsers and is
+            more accessible.
+        </p>
+
+        <hr />
+
+        <h2>Common HTML Mistakes</h2>
+
+        <h3>1. Missing Closing Tags</h3>
+        <pre><code>&lt;!-- WRONG: Missing closing tag --&gt;
+&lt;p&gt;This paragraph is not closed
+&lt;p&gt;Another paragraph
+
+&lt;!-- CORRECT: All tags properly closed --&gt;
+&lt;p&gt;This paragraph is closed&lt;/p&gt;
+&lt;p&gt;Another paragraph&lt;/p&gt;</code></pre>
+
+        <h3>2. Incorrect Nesting</h3>
+        <pre><code>&lt;!-- WRONG: Tags overlap incorrectly --&gt;
+&lt;p&gt;Text &lt;strong&gt;bold&lt;/p&gt;&lt;/strong&gt;
+
+&lt;!-- CORRECT: Tags nest properly --&gt;
+<head>
+  <!--
+    <head> contains metadata - information about the page that isn't visible.
+    This includes title, character encoding, viewport settings, etc.
+  -->
+  <meta charset="UTF-8" />
+  <!--
+    UTF-8 encoding supports all characters including emojis and international text.
+    Always include this FIRST in the head section.
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--
+    Viewport meta tag makes pages responsive on mobile devices.
+    Without this, mobile browsers may zoom out to show desktop layout.
+  -->
+  <meta name="description" content
+&lt;p&gt;Text &lt;strong&gt;bold&lt;/strong&gt;&lt;/p&gt;</code></pre>
+
+        <h3>3. Missing Alt Attributes on Images</h3>
+        <pre><code>&lt;!-- WRONG: No alt attribute --&gt;
+&lt;img src="photo.jpg" /&gt;
+
+&lt;!-- CORRECT: Alt attribute included --&gt;
+&lt;img src="photo.jpg" alt="Description of the image" /&gt;
+
+&lt;!-- Also correct: Empty alt for decorative images --&gt;
+&lt;img src="decoration.jpg" alt="" /&gt;</code></pre>
+
+        <h3>4. Missing Labels for Form Inputs</h3>
+        <pre><code>&lt;!-- WRONG: Input without label --&gt;
+&lt;input type="text" name="email" /&gt;
+
+&lt;!-- CORRECT: Input with associated label --&gt;
+&lt;label for="email"&gt;Email:&lt;/label&gt;
+&lt;input id="email" type="text" name="email" /&gt;</code></pre>
+
+        <h3>5. Using Deprecated Tags</h3>
+        <pre><code>&lt;!-- WRONG: Deprecated tags (don't use these) --&gt;
+&lt;font color="red"&gt;Text&lt;/font&gt;
+&lt;center&gt;Centered text&lt;/center&gt;
+&lt;b&gt;Bold&lt;/b&gt; &lt;i&gt;Italic&lt;/i&gt;
+
+&lt;!-- CORRECT: Use semantic HTML5 and CSS --&gt;
+&lt;strong&gt;Important text&lt;/strong&gt;
+&lt;em&gt;Emphasized text&lt;/em&gt;
+&lt;!-- Use CSS for colors and centering --&gt;</code></pre>
+
+        <h3>6. Missing DOCTYPE</h3>
+        <pre><code>&lt;!-- WRONG: No DOCTYPE --&gt;
+&lt;html&gt;
+  &lt;head&gt;...
+
+&lt;!-- CORRECT: HTML5 DOCTYPE --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;...</code></pre>
+
+        <h3>7. Incorrect Heading Hierarchy</h3>
+        <pre><code>&lt;!-- WRONG: Skipping heading levels --&gt;
+&lt;h1&gt;Title&lt;/h1&gt;
+&lt;h3&gt;Subtitle&lt;/h3&gt; &lt;!-- Should be h2 --&gt;
+
+&lt;!-- CORRECT: Proper hierarchy --&gt;
+&lt;h1&gt;Title&lt;/h1&gt;
+&lt;h2&gt;Subtitle&lt;/h2&gt;
+&lt;h3&gt;Sub-subtitle&lt;/h3&gt;</code></pre>
+
+        <hr />
+
+        <h2>HTML Best Practices</h2>
+
+        <h3>1. Use Semantic HTML5 Elements</h3>
+        <pre><code>&lt;!-- GOOD: Semantic elements --&gt;
+&lt;header&gt;
+  &lt;nav&gt;...&lt;/nav&gt;
+&lt;/header&gt;
+&lt;main&gt;
+  &lt;article&gt;...&lt;/article&gt;
+&lt;/main&gt;
+&lt;footer&gt;...&lt;/footer&gt;
+
+&lt;!-- AVOID: Generic divs everywhere --&gt;
+&lt;div class="header"&gt;
+  &lt;div class="nav"&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <h3>2. Always Include Alt Text for Images</h3>
+        <pre><code>&lt;!-- Descriptive alt for informative images --&gt;
+&lt;img src="chart.jpg" alt="Sales increased 25% in Q4" /&gt;
+
+&lt;!-- Empty alt for decorative images --&gt;
+&lt;img src="decoration.jpg" alt="" /&gt;</code></pre>
+
+        <h3>3. Use Proper Form Labels</h3>
+        <pre><code>&lt;!-- Method 1: Label with 'for' attribute --&gt;
+&lt;label for="username"&gt;Username:&lt;/label&gt;
+&lt;input id="username" type="text" /&gt;
+
+&lt;!-- Method 2: Label wrapping input --&gt;
+&lt;label&gt;
+  Username:
+  &lt;input type="text" /&gt;
+&lt;/label&gt;</code></pre>
+
+        <h3>4. Indent Your Code Consistently</h3>
+        <pre><code>&lt;!-- GOOD: Consistent indentation (2 spaces shown) --&gt;
+&lt;div&gt;
+  &lt;p&gt;
+    Text content here.
+  &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+        <h3>5. Use Lowercase for Tags and Attributes</h3>
+        <pre><code>&lt;!-- GOOD: Lowercase --&gt;
+&lt;div class="container"&gt;...&lt;/div&gt;
+
+&lt;!-- AVOID: Mixed case --&gt;
+&lt;DIV CLASS="container"&gt;...&lt;/DIV&gt;</code></pre>
+
+        <h3>6. Quote All Attribute Values</h3>
+        <pre><code>&lt;!-- GOOD: Quoted attributes --&gt;
+&lt;div class="container" id="main"&gt;...&lt;/div&gt;
+
+&lt;!-- AVOID: Unquoted attributes --&gt;
+&lt;div class=container id=main&gt;...&lt;/div&gt;</code></pre>
+
+        <h3>7. Close All Tags Properly</h3>
+        <pre><code>&lt;!-- GOOD: All tags closed --&gt;
+&lt;p&gt;Paragraph&lt;/p&gt;
+&lt;div&gt;Container&lt;/div&gt;
+
+&lt;!-- Self-closing tags in HTML5 --&gt;
+&lt;img src="photo.jpg" alt="Photo" /&gt;
+&lt;br /&gt;
+&lt;hr /&gt;
+&lt;input type="text" /&gt;</code></pre>
+
+        <h3>8. Use Meaningful IDs and Classes</h3>
+        <pre><code>&lt;!-- GOOD: Meaningful names --&gt;
+&lt;div id="main-navigation"&gt;...&lt;/div&gt;
+&lt;section class="article-content"&gt;...&lt;/section&gt;
+
+&lt;!-- AVOID: Unclear names --&gt;
+&lt;div id="div1"&gt;...&lt;/div&gt;
+&lt;section class="box"&gt;...&lt;/section&gt;</code></pre>
+
+        <hr />
+
+        <h2>HTML Validators</h2>
+        <p>Use these tools to validate your HTML:</p>
+        <ul>
+            <li>
+                <a href="https://validator.w3.org/" target="_blank" rel="noopener noreferrer">W3C Markup Validator</a>
+                - Official HTML validator
+            </li>
+            <li>
+                <a href="https://html5.validator.nu/" target="_blank" rel="noopener noreferrer">HTML5 Validator</a>
+                - Modern HTML5 validator
+            </li>
+            <li>
+                <a href="https://validator.w3.org/nu/" target="_blank" rel="noopener noreferrer">Nu Html Checker</a>
+                - Another W3C validator
+            </li>
+        </ul>
+
+        <hr />
+
+        <h2>Accessibility Checklist</h2>
+        <ul>
+            <li>✓ Use semantic HTML5 elements</li>
+            <li>✓ Include alt text for all images</li>
+            <li>✓ Use proper heading hierarchy (h1, h2, h3...)</li>
+            <li>✓ Label all form inputs</li>
+            <li>✓ Use lang attribute on html tag</li>
+            <li>✓ Provide text alternatives for media</li>
+            <li>✓ Ensure keyboard navigation works</li>
+            <li>✓ Use ARIA attributes when needed</li>
+        </ul>
+
+        <hr />
+
+        <h2>Complete Valid HTML5 Example</h2>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  &lt;meta name="description" content="Page description" /&gt;
+  &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Site Title&lt;/h1&gt;
+    &lt;nav aria-label="Main navigation"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;article&gt;
+      &lt;h2&gt;Article Title&lt;/h2&gt;
+      &lt;p&gt;Article content here.&lt;/p&gt;
+      &lt;img src="photo.jpg" alt="Description of photo" /&gt;
+    &lt;/article&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;&copy; 2025 My Site&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </main>
+
+    <footer>
+        <hr />
+        <p><a href="index.html">Back to Home</a></p>
+    </footer>
+</body>
+
+</html>

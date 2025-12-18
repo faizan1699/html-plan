@@ -1,14 +1,60 @@
 <!DOCTYPE html>
+<!--
+  HTML5 DOCTYPE - Required for valid HTML5 documents.
+  This tells browsers to render in standards mode.
+-->
 <html lang="en">
+  <!--
+    lang attribute helps screen readers and search engines understand the content language.
+    Set to "en" for English, "ur" for Urdu, etc.
+  -->
   <head>
+    <!--
+      <head> contains metadata - information about the page that isn't visible.
+      Includes title, character encoding, viewport settings, etc.
+    -->
     <meta charset="UTF-8" />
+    <!--
+      UTF-8 encoding supports all characters including emojis and international text.
+      Always include this FIRST in the head section.
+    -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+      Viewport meta tag makes pages responsive on mobile devices.
+      Without this, mobile browsers may zoom out to show desktop layout.
+    -->
+    <meta name="description" content="Learn HTML text elements including headings, paragraphs, and inline text formatting tags." />
+    <!--
+      Description meta tag appears in search engine results.
+      Keep it descriptive and under 160 characters.
+    -->
     <title>HTML Text Elements</title>
+    <!--
+      <title> appears in the browser tab and is used by search engines.
+      Keep it descriptive and under 60 characters.
+    -->
   </head>
   <body>
+    <!--
+      <body> contains all visible content on the page.
+      Everything users see goes inside the body tag.
+    -->
     <header>
+      <!--
+        <header> is a semantic HTML5 element for the top section.
+        Typically contains site title, logo, and main navigation.
+        Using semantic tags improves SEO and accessibility.
+      -->
       <h1>HTML Text Elements</h1>
-      <nav>
+      <!--
+        <h1> is the main page heading - only ONE per page.
+        Most important heading for SEO and screen readers.
+      -->
+      <nav aria-label="Main navigation">
+        <!--
+          <nav> is specifically for navigation links.
+          aria-label helps screen readers identify the navigation purpose.
+        -->
         <a href="index.html">Home</a> |
         <a href="html-text.html">Text</a> |
         <a href="html-lists.html">Lists</a> |
@@ -18,38 +64,149 @@
         <a href="html-media.html">Media</a>
       </nav>
       <hr />
+      <!--
+        <hr> creates a horizontal rule to visually separate sections.
+        Self-closing tag in HTML5.
+      -->
     </header>
 
     <main>
+      <!--
+        <main> contains the main content of the page.
+        There should be only ONE <main> per page.
+        Helps screen readers skip navigation and go to main content.
+      -->
       <h2>Headings</h2>
+      <!--
+        <h2> through <h6> are subheadings.
+        Use them in order (h1, then h2, then h3, etc.).
+        Don't skip levels (e.g., don't go from h1 to h3).
+      -->
+      <p>
+        Headings create a hierarchy for your content. Use them in order from h1
+        (most important) to h6 (least important).
+      </p>
+
       <h1>h1 Main heading</h1>
+      <!--
+        <h1> should be used only once per page as the main title.
+        It's the most important heading for SEO.
+      -->
       <h2>h2 Section heading</h2>
+      <!--
+        <h2> is for major sections within the page.
+        Use multiple h2 elements for different sections.
+      -->
       <h3>h3 Sub‑section heading</h3>
+      <!--
+        <h3> is for subsections within h2 sections.
+        Continue this pattern for h4, h5, h6 as needed.
+      -->
       <h4>h4 Smaller heading</h4>
       <h5>h5 Very small heading</h5>
       <h6>h6 Smallest heading</h6>
 
-      <h2>Paragraph and inline text</h2>
+      <pre><code>&lt;h1&gt;Main Title&lt;/h1&gt;
+&lt;h2&gt;Section Title&lt;/h2&gt;
+&lt;h3&gt;Subsection Title&lt;/h3&gt;
+&lt;h4&gt;Smaller Subsection&lt;/h4&gt;</code></pre>
+
+      <hr />
+
+      <h2>Paragraph and Inline Text</h2>
+      <!--
+        <p> creates a paragraph - a block of text.
+        Browsers add spacing before and after paragraphs automatically.
+      -->
       <p>
         This is a normal <strong>paragraph</strong> of text. You can use
         <strong>&lt;strong&gt;</strong> to make text bold and
         <em>&lt;em&gt;</em> to make text italic.
       </p>
+      <!--
+        <strong> makes text bold AND indicates semantic importance.
+        Screen readers emphasize this text. Use for important content.
+        For just visual bold (no importance), use CSS instead.
+      -->
+      <!--
+        <em> makes text italic AND indicates emphasis.
+        Screen readers stress this text. Use for emphasized content.
+        For just visual italic (no emphasis), use CSS instead.
+      -->
+
+      <pre><code>&lt;p&gt;
+  This is a paragraph with &lt;strong&gt;bold&lt;/strong&gt; and
+  &lt;em&gt;italic&lt;/em&gt; text.
+&lt;/p&gt;</code></pre>
+
       <p>
         Other inline tags:
         <mark>mark (highlight)</mark>,
+        <!--
+          <mark> highlights text (like a highlighter pen).
+          Useful for marking important or relevant text.
+        -->
         <code>code (inline code)</code>,
+        <!--
+          <code> displays inline code or code snippets.
+          Usually rendered in monospace font.
+          For code blocks, use <pre><code> instead.
+        -->
         <u>u (underline)</u>,
+        <!--
+          <u> underlines text. Use sparingly - underlines are usually for links.
+          Prefer CSS for styling instead.
+        -->
         <small>small (smaller text)</small>.
+        <!--
+          <small> makes text smaller. Often used for fine print, disclaimers.
+          Semantic meaning: side comments, legal text, copyright info.
+        -->
       </p>
+
+      <pre><code>&lt;p&gt;
+  &lt;mark&gt;Highlighted text&lt;/mark&gt;,
+  &lt;code&gt;inline code&lt;/code&gt;,
+  &lt;u&gt;underlined text&lt;/u&gt;,
+  &lt;small&gt;smaller text&lt;/small&gt;.
+&lt;/p&gt;</code></pre>
+
+      <hr />
+
+      <h2>Common Mistakes Fixed</h2>
+      <ul>
+        <li>
+          <strong>Mistake:</strong> Using &lt;b&gt; and &lt;i&gt; instead of
+          &lt;strong&gt; and &lt;em&gt;
+        </li>
+        <li>
+          <strong>Fix:</strong> Use semantic tags. &lt;strong&gt; and &lt;em&gt;
+          have meaning, while &lt;b&gt; and &lt;i&gt; are just visual.
+        </li>
+        <li>
+          <strong>Mistake:</strong> Skipping heading levels (h1 to h3)
+        </li>
+        <li>
+          <strong>Fix:</strong> Use headings in order (h1, h2, h3, h4...)
+        </li>
+        <li>
+          <strong>Mistake:</strong> Using &lt;br&gt; for spacing instead of
+          paragraphs
+        </li>
+        <li>
+          <strong>Fix:</strong> Use &lt;p&gt; for paragraphs. Use &lt;br&gt;
+          only for line breaks within a paragraph.
+        </li>
+      </ul>
     </main>
 
     <footer>
+      <!--
+        <footer> is a semantic element for the bottom section.
+        Typically contains copyright, links, contact info.
+      -->
       <hr />
       <p><a href="index.html">Back to Home</a></p>
     </footer>
   </body>
 </html>
-
-
-
