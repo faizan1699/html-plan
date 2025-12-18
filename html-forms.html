@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Forms</title>
+  </head>
+  <body>
+    <header>
+      <h1>HTML Forms</h1>
+      <nav>
+        <a href="index.html">Home</a> |
+        <a href="html-text.html">Text</a> |
+        <a href="html-lists.html">Lists</a> |
+        <a href="html-tables.html">Tables</a> |
+        <a href="html-forms.html">Forms</a> |
+        <a href="html-layout.html">Layout</a> |
+        <a href="html-media.html">Media</a>
+      </nav>
+      <hr />
+    </header>
+
+    <main>
+      <h2>Basic form</h2>
+      <form>
+        <label for="username">Username:</label>
+        <input id="username" name="username" type="text" />
+        <br />
+
+        <label for="email">Email:</label>
+        <input id="email" name="email" type="email" />
+        <br />
+
+        <label for="age">Age:</label>
+        <input id="age" name="age" type="number" />
+        <br />
+
+        <label>
+          <input type="checkbox" name="subscribe" />
+          Subscribe to newsletter
+        </label>
+        <br />
+
+        <p>Choose your role:</p>
+        <label>
+          <input type="radio" name="role" value="student" />
+          Student
+        </label>
+        <label>
+          <input type="radio" name="role" value="teacher" />
+          Teacher
+        </label>
+        <br />
+
+        <label for="topic">Favorite topic:</label>
+        <select id="topic" name="topic">
+          <option>HTML</option>
+          <option>CSS</option>
+          <option>JavaScript</option>
+        </select>
+        <br />
+
+        <label for="comments">Comments:</label>
+        <br />
+        <textarea id="comments" name="comments" rows="4" cols="30"></textarea>
+        <br />
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+    </main>
+
+    <footer>
+      <hr />
+      <p><a href="index.html">Back to Home</a></p>
+    </footer>
+  </body>
+</html>
+
+
+
